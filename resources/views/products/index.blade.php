@@ -1,132 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Laravel 8 CRUD Tutorial From Scratch</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
-</head>
-<body>
-<div class="container mt-2">
-<div class="row">
-<div class="col-lg-12 margin-tb">
-<div class="pull-left">
-<h2>Listing of products</h2>
-</div>
-<div class="pull-right mb-2">
-<a class="btn btn-success" href="{{ route('products.create') }}"> Create Product</a>
-</div>
-</div>
-</div>
-@if ($message = Session::get('success'))
-<div class="alert alert-success">
-<p>{{ $message }}</p>
-</div>
-@endif
-<table class="table table-bordered">
-<tr>
-<th>S.No</th>
-<th>Product Name</th>
-<th>Brand</th>
-<th>Category</th>
-<th>Product Type</th>
-<th>Product Image</th>
-<th>Description</th>
-<th>Model Year</th>
-<th>Product Code</th>
-<th>Selling Price</th>
-<th>Calculation price</th>
-<th>Frequency</th>
-<th>Maintanance Sheet</th>
-<th>Installation Sheet</th>
-<th>Brand_logo</th>
-<th>Life span</th>
-<th>Environment score </th>
-<th>Energy neutral</th>
-<th>Returnable</th>
-<th>Movable</th>
-<th>Compatible</th>
-<th>Demountable</th>
-<th>Pace_layering</th>
-<th>Recycle_Content</th>
-<th>BioBased</th>
-<th>Extendable_life</th>
-<th>Manufacturer</th>
-<th>Website_Brand</th>
-<th>Bearing_Capacity</th>
-<th>U_Value</th>
-<th>Fire_Resistence</th>
-<th>Lenght_X</th>
-<th>Height_Y</th>
-<th>Widht_Z</th>
-<th>Construction_Method</th>
-<th>Building_System</th>
-<th>Construction_Type</th>
-<th>Interior_Finish</th>
-<th>Exterior_Cladding</th>
-<th>Color</th>
-<th>Designed_By</th>
-<th>Configuaration</th>
-<th>Specification_Text</th>
-<th>3D_Object</th>
-<th width="280px">Action</th>
-</tr>
-@foreach ($products as $product)
-<tr>
-<td>{{ $product->id }}</td>
-<td>{{ $product->product_name }}</td>
-<td>{{ $product->brand }}</td>
-<td>{{ $product->category }}</td>
-<td>{{ $product->product_type }}</td>
-<td>{{ $product->product_image }}</td>
-<td>{{ $product->description }}</td>
-<td>{{ $product->model_year }}</td>
-<td>{{ $product->product_code }}</td>
-<td>{{ $product->selling_price }}</td>
-<td>{{ $product->calculation_price }}</td>
-<td>{{ $product->frequency }}</td>
-<td>{{ $product->maintenance_sheet }}</td>
-<td>{{ $product->installation_sheet }}</td>
-<td>{{ $product->brand_log }}</td>
-<td>{{ $product->life_span }}</td>
-<td>{{ $product->env_score }}</td>
-<td>{{ $product->energy_neutral }}</td>
-<td>{{ $product->returnable }}</td>
-<td>{{ $product->movable }}</td>
-<td>{{ $product->compatible }}</td>
-<td>{{ $product->demountable }}</td>
-<td>{{ $product->pace_layering }}</td>
-<td>{{ $product->recycled_content }}</td>
-<td>{{ $product->biobased }}</td>
-<td>{{ $product->extendable_life }}</td>
-<td>{{ $product->manufacturer }}</td>
-<td>{{ $product->website_brand }}</td>
-<td>{{ $product->bearing_capacity }}</td>
-<td>{{ $product->fire_resistance }}</td>
-<td>{{ $product->length_x }}</td>
-<td>{{ $product->height_y }}</td>
-<td>{{ $product->width_z }}</td>
-<td>{{ $product->construction_method }}</td>
-<td>{{ $product->building_system }}</td>
-<td>{{ $product->construction_type }}</td>
-<td>{{ $product->interior_finish }}</td>
-<td>{{ $product->exterior_cladding }}</td>
-<td>{{ $product->color }}</td>
-<td>{{ $product->designed_by }}</td>
-<td>{{ $product->configuration }}</td>
-<td>{{ $product->specification_text }}</td>
-<td>{{ $product->td_object }}</td>
 
-<form action="{{ route('products.destroy',$product->id) }}" method="Post">
-<td>
-<a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
-@csrf
-@method('DELETE')
-<button type="submit" class="btn btn-danger">Delete</button>
-</form>
-</td>
-</tr>
-@endforeach
-</table>
-{!! $products->links() !!}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Product Data Library</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo C-iD.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+ 
+  <style>
+  .sidebar{
+  background-image: url('assets/img/C-iD platform background green.jpg');
+  background-repeat:repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width:150px;
+
+  }
+  
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</style>
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+</style>
+  <!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar" background image="assets/img/C-iD platform background green.jpg">
+  
+    <ul class="sidebar-nav" id="sidebar-nav">
+<div>
+      <li class="nav-item" width="55px" height="55px">  
+        <img src="assets/img/logo C-iD.png" alt="" width="55px" height="55px">          
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item" width="55px" height="55px">
+     <b><span>Dashboard</span></b>
+      </li><!-- End Components Nav -->
+</div>
+</br>
+<div>
+      <li class="nav-item">
+        <img src="assets/img/icon my files.png" alt="" width="55px" height="55px">
+      </li><!-- End Forms Nav -->
+      <li class="nav-item">
+     <b><span>My Files</span></b>
+      </li><!-- End Components Nav -->
+</div>
+</br>
+<div>
+      <li class="nav-item">
+        <img src="assets/img/icon my c-ids.png" alt="" width="55px" height="55px">
+      </li><!-- End Tables Nav -->
+      <li class="nav-item">
+     <b><span>My C-iD's</span></b>
+      </li><!-- End Components Nav -->
+</div>
+</br>
+
+<div>
+      <li class="nav-item">     
+      <img src="assets/img/icon product data library.png" alt="" width="55px" height="55px">
+      </li><!-- End Charts Nav -->
+      <li class="nav-item">
+     <b><span>Product Data</span></b>
+      </li><!-- End Components Nav -->
+</div></br>
+
+<div>
+      <li class="nav-item">
+        <img src="assets/img/icon more info.png" alt="" width="55px" height="55px">    
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+     <b><span>More info</span></b>
+      </li><!-- End Components Nav -->     
+</div></br>
+    </ul>
+  </aside><!-- End Sidebar-->
+ <!-- ======= Header ======= -->
+ <header id="header" class="header fixed-top d-flex align-items-center">
+
+<div class="d-flex align-items-center justify-content-between">
+  <a href="index.html" class="logo d-flex align-items-center">
+    <img src="assets/img/logo.png" alt="">
+    <span class="d-none d-lg-block">Product Data Library</span>
+  </a>
+  
+</div><!-- End Logo -->
+
+
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown">
+        </li><!-- End Notification Nav -->
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <span class="">Sakshi</span>
+            <img src="assets/img/icon user.png" alt="Profile" class="rounded-circle">
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+          </a><!-- End Profile Iamge Icon -->
+          
+</li>
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+  <main id="main" class="main">
+  
+    <div class="pagetitle">
+    <h1><a class="breadcrumb-item">List of products & groups</li></h1>
+      <nav>
+        <ol class="breadcrumb">
+         <h6>1 items</h6>
+        </ol>
+    </div><!-- End Page Title -->
+</div>
+      </nav>
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+        </div>
+        </div>  
+           
+        <!-- Right side columns -->
+        <div class="col-lg-4">
+       
+        <button type="button" class="btn btn-outline-primary" onClick="window.location.href='products/create';" width="250px">Create new product data</button> 
+ 
+        </div>
+    </section>
+            <!-- Sales Card -->
+          
+                <div class="card">
+                <img src="assets/img/icon product data.png" alt="John" style="width:35%">
+            
+                <div style="margin:5px 0;">
+                    <a href="#"></a> 
+                    <a href="#"></a>  
+                    <a href="#"></a>  
+                    <a href="#"></a> 
+                </div>
+                <div>
+                    <span>Brand</span></br>
+                    <span><b>AWS 75.SI+</b></span></br>
+                    <span>31.2 , Exterior window</span>
+
+                  </div>
+                </div>
+                
+
+           
+        <!-- Right side columns -->
+        
+    </section>
+
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -266,6 +266,8 @@ img {
   }
 }
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="parent clearfix">
     <div class="bg-illustration">
       <img src="images/logo C-iD.png" alt="logo">
@@ -283,7 +285,21 @@ img {
                                 <input type="password" placeholder="Password" id="password" class="form-control" name="password" required>
                                 <button type="submit">Login</button>
             <div class="forget-pass">
-              <a href="#"><u>Forgot your  Password ?</u></a>
+            <div class="w3-container">
+          <h2></h2>
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Forget your password..?</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <label>E-mail</label>
+       <input type="text" placeholder="Email" id="email" class="form-control" name="email" required autofocus>
+       <button type="button">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
             </div>
              </br>
             <div class="form-group mb-3">
