@@ -284,23 +284,14 @@ img {
                                 <label>Password</label>
                                 <input type="password" placeholder="Password" id="password" class="form-control" name="password" required>
                                 <button type="submit">Login</button>
-            <div class="forget-pass">
-            <div class="w3-container">
-          <h2></h2>
-  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Forget your password..?</button>
-
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-        <label>E-mail</label>
-       <input type="text" placeholder="Email" id="email" class="form-control" name="email" required autofocus>
-       <button type="button">Submit</button>
-      </div>
-    </div>
-  </div>
-</div>
-            </div>
+         
+                                <div class="form-group mb-3">
+                                <div class="checkbox">
+                                    <label>
+                                 <a href="#"><i><u>Forget your password.?</a></i>
+                                    </label>
+                                </div>
+                            </div>
              </br>
             <div class="form-group mb-3">
                                 <div class="checkbox">
