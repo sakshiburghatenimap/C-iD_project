@@ -18,7 +18,7 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('mainmenu');
 });
 
 
@@ -36,3 +36,6 @@ Route::get('signout', [UserauthController::class, 'signOut'])->name('signout');
 
 
 Route::resource('products', ProductController::class);
+
+
+/*--------------------Main menu----------------------------------------*/
