@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
-    protected $connection = "mysql2";
+    
+    protected $connection = 'mysql2';
 
     protected $fillable = [
         'product_name',

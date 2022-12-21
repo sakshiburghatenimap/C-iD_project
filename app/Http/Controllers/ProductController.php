@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class ProductController extends Controller
@@ -13,14 +14,14 @@ class ProductController extends Controller
             return view('products.index', $data);
      }
 
-public function create()
-{
-return view('products.create');
-}
+     public function create()
+    {
+       return view('products.create');
+    }
 
-public function store(Request $request)
-{
-$request->validate([
+     public function store(Request $request)
+     {
+        $request->validate([
 
         'product_name'=> 'required',
         'brand'=> 'required',

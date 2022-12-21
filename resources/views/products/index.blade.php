@@ -8,7 +8,7 @@
   <title>Product Data Library</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <!-- Favicons -->
   <link href="assets/img/logo C-iD.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -266,9 +266,12 @@ body {
         </div>
     </section>
             <!-- Sales Card -->
-          
+        <form>
+          @csrf
                 <div class="card">
-                <img src="assets/img/icon product data.png" alt="John" style="width:35%">
+                @foreach ($products as $product)
+                
+                {{ $product->product_image }}
             
                 <div style="margin:5px 0;">
                     <a href="#"></a> 
@@ -277,19 +280,16 @@ body {
                     <a href="#"></a> 
                 </div>
                 <div>
-                    <span>Brand</span></br>
-                    <span><b>AWS 75.SI+</b></span></br>
-                    <span>31.2 , Exterior window</span>
-
+                    <span>{{ $product->brand }}</span></br>
+                    <span><b>{{ $product->product_type }}</b></span></br>
                   </div>
                 </div>
-                
-
-           
+           @endforeach
         <!-- Right side columns -->
         
     </section>
 
+</form>
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

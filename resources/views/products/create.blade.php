@@ -8,7 +8,7 @@
   <title>Create product data</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <!-- Favicons -->
   <link href="{{ asset('assets/img/favicon.png" rel="icon') }}">
   <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
@@ -165,23 +165,24 @@
               <h5 class="card-title">Create new Product data</h5>
 
               <!-- General Form Elements -->
-              <form>
+              <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+              @csrf
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">Product Name</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="product_name">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Brand</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="brand">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Category</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="category">
                       <option selected>Open this select menu</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -192,7 +193,7 @@
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Type</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="product_type">
                       <option selected>Open this select menu</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -203,87 +204,89 @@
                 <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Product Image</label>
                   <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="formFile" name="product_image">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Description</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" style="height: 100px"></textarea>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-2 col-form-label">Product code</label>
-                  <div class="col-sm-10">
-                    <input type="number" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputEmail" class="col-sm-2 col-form-label">Selling price</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputEmail" class="col-sm-2 col-form-label">Calculation price</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputEmail" class="col-sm-2 col-form-label">Maintainance Frequency</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
-                  </div>
-                 </div>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-2 col-form-label">Maintenance Sheet</label>
-                  <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-2 col-form-label">Installation Sheet</label>
-                  <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-2 col-form-label">Brand logo</label>
-                  <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile">
+                    <textarea class="form-control" style="height: 100px" name="description"></textarea>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputDate" class="col-sm-2 col-form-label">Model year</label>
                   <div class="col-sm-10">
-                    <input type="date" class="form-control">
+                    <input type="date" class="form-control" name="model_year">
                   </div>
                 </div>
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Product code</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" name="product_code">
+                  </div>
+                </div>
+              
+                <div class="row mb-3">
+                  <label for="inputEmail" class="col-sm-2 col-form-label">Selling price</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="selling_price">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputEmail" class="col-sm-2 col-form-label">Calculation price</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="calculation_price">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputEmail" class="col-sm-2 col-form-label">Maintainance Frequency</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="frequency">
+                  </div>
+                 </div>
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Maintenance Sheet</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="formFile" name="maintenance_sheet">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Installation Sheet</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="formFile" name="installation_sheet">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Brand logo</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="formFile" name="brand_log">
+                  </div>
+                </div>
+                
                 
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">Expected life span</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="life_span">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">Environmental score</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control"  name="env_score">
                   </div>
                 </div>
                 <fieldset class="row mb-3">
                   <legend class="col-form-label col-sm-2 pt-0">Energy neutral</legend>
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="energy_neutral" id="energy_neutral" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="energy_neutral" id="energy_neutral" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -296,13 +299,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Returnable</legend>
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="returnable" id="returnable" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="returnable" id="returnable" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -314,13 +317,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Movable</legend>
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="movable" id="movable" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="movable" id="movable" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -332,31 +335,30 @@
                   <legend class="col-form-label col-sm-2 pt-0">Compatible</legend>
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="compatible" id="compatible" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="compatible" id="compatible" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
                     </div>
-                    
                   </div>
                 </fieldset>
                 <fieldset class="row mb-3">
                   <legend class="col-form-label col-sm-2 pt-0">Demountable</legend>
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="demountable" id="demountable" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="demountable" id="demountable" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -368,13 +370,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Pace-Layering</legend>
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="pace_layering" id="pace_layering" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="pace_layering" id="pace_layering" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -386,13 +388,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Recycle Content</legend>
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="recycled_content" id="recycled_content" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="recycled_content" id="recycled_content" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -404,13 +406,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">BioBased</legend>
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="biobased" id="biobased" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="biobased" id="biobased" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -422,13 +424,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Extendable life</legend>
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="extendable_life" id="extendable_life" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="extendable_life" id="extendable_life" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -437,68 +439,61 @@
                   <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Manufacturer</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="manufacturer">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Website Brand</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="website_brand">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Bearing capacity</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="bearing_capacity">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">U-value</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="u-value">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Sound insulation</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="sound_insulation">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Fire resistance</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="fire_resistance">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Lenght-X max</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="length_x">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Height-Y max</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="height_y">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Weight-Z max</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="width_z">
                   </div>
                 </div>
-                <div class="row mb-3">
-                  <label for="inputEmail" class="col-sm-2 col-form-label">Lenght-X max</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Construction method</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="construction_method">
                       <option selected>Select method</option>
                       <option value="1">Assembly</option>
                       <option value="2">Skeleton</option>
@@ -510,7 +505,7 @@
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Building System</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="building_system">
                       <option selected>Select Sytem</option>
                       <option value="1">OBase building and fit-outne</option>
                       <option value="2">Load-bearing exterior walls</option>
@@ -521,7 +516,7 @@
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Construction type</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="construction_type">
                       <option selected>Open this select menu</option>
                       <option value="1">Timber</option>
                       <option value="2">CLT</option>
@@ -534,9 +529,23 @@
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Interior finish/Exterior Cladding</label>
+                  <label class="col-sm-2 col-form-label">Interior finish</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="interior_finish">
+                      <option selected>Open this select menu</option>
+                      <option value="1">Aluminium</option>
+                      <option value="2">Concrete</option>
+                      <option value="3">Synthetic</option>
+                      <option value="4">Steel</option>
+                      <option value="5">Stone</option>
+                      <option value="6">other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Exterior Cladding</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example" name="exterior_cladding">
                       <option selected>Open this select menu</option>
                       <option value="1">Aluminium</option>
                       <option value="2">Concrete</option>
@@ -550,7 +559,7 @@
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Color</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="color">
                       <option selected>Open this select menu</option>
                       <option value="1">White</option>
                       <option value="2">Yellow</option>
@@ -570,25 +579,25 @@
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Designed by</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="designed_by">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">All possible configuration</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="configuration">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Specification text</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="specification_text">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">3D object</label>
                   <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="formFile" name="td_object">
                   </div>
                 </div>  
                 <div class="row mb-3">
@@ -597,14 +606,11 @@
                     <button type="submit" class="btn btn-primary">Submit Data</button>
                   </div>
                 </div>
+                </form>
                   </div>
                 </div>
-                
-                </fieldset>
-            
             </div>
           </div>
-
         </div>
       </div>
     </section>
