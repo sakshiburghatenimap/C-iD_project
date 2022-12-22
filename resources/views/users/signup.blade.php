@@ -155,26 +155,26 @@
     </div><!-- End Page Title -->
 
     <section class="section">
+    <div class="row mb-0">
+                  <div class="col-sm-10" align="right">
+                    <button type="submit" class="btn btn-outline-primary" i class="fa-thin fa-check">Save</button>
+                  </div>
+                </div>
       <div class="row">
         <div class="col-lg-12">
-
-          <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Create new User</h5>
-
+             
               <!-- General Form Elements -->
               <form action="{{ route('register.custom') }}" method="POST">
-            @csrf
-                <div class="row mb-3">
-                  <label for="name" class="col-sm-2 col-form-label">Brand/Company/Last name</label>
+                @csrf
+                <div class="row mb-0">
+                  <label for="name" class="col-sm-2 col-form-label">User Name</label>
                   <div class="col-sm-6">
                     <input type="text" class="form-control" name="name">
                   </div>
-                  <label for="name" class="col-sm-2 col-form-label">Brand,Company or Last name of the user</label>
+                  <label for="name" class="col-sm-4 col-form-label">Brand,Company or Last name of user</label>
                 </div>
-                <fieldset class="row mb-3">
-                  <legend class="col-form-label col-sm-2 pt-0">Select User Type</legend>
-                  <div class="col-sm-6">
+                 <label>User Type* :</label>
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="user_role" id="resident" value="resident">
                       <label class="form-check-label" for="resident">
@@ -218,97 +218,86 @@
                       </label>
                     </div>
                   </div>
-                </fieldset>
-                <div class="row mb-3">
+                <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-6">
                     <input type="text" class="form-control" name="email">
                   </div>
-                  <label for="inputEmail" class="col-sm-2 col-form-label">Valid email address</label>
+                  <label for="inputEmail" class="col-sm-4 col-form-label">Valid email address</label>
                 </div>
-                <div class="row mb-3">
+                <div class="row mb-0">
                   <label for="password" class="col-sm-2 col-form-label">Password</label>
                   <div class="col-sm-6">
                     <input type="password" class="form-control" name="password">
                   </div>
-                  <label for="password" class="col-sm-2 col-form-label">Minimum 8 char,of which 2 leeter , 2 number and 1 capital</label>
+                  <label for="password" class="col-sm-4 col-form-label">Mini 8 char 2 letter 2 number 1 capital</label>
                 </div>
-                <div class="row mb-3">
+                <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Phone number</label>
                   <div class="col-sm-6">
                     <input type="number" class="form-control" name="phone_number">
                   </div>
-                  <label for="inputNumber" class="col-sm-2 col-form-label">Telephone or mobile number </label>
+                  <label for="inputNumber" class="col-sm-4 col-form-label">Telephone or mobile number </label>
                 </div>
-                <div class="row mb-3">
+                <div class="row mb-0">
                   <label for="country" class="col-sm-2 col-form-label">Country</label>
                   <div class="col-sm-6">
                     <input type="text" class="form-control" name="country">
                   </div>
-                  <label for="country" class="col-sm-2 col-form-label">Country of location</label>
+                  <label for="inputNumber" class="col-sm-4 col-form-label">Country of location </label>
                 </div>
-                <div class="row mb-3">
+                <div class="row mb-0">
                   <label for="VAT_number" class="col-sm-2 col-form-label">VAT_Number</label>
                   <div class="col-sm-6">
                     <input type="number" class="form-control" name="VAT_number">
                   </div>
-                  <label for="VAT_number" class="col-sm-2 col-form-label">VAT/Chamber of Commerce/registration number</label>
+                  <label for="inputNumber" class="col-sm-4 col-form-label">VAT/Chamber of Commerce/registration</label>
                  </div>
-                 <div class="row mb-3">
+                 <div class="row mb-0">
                   <label for="company_name" class="col-sm-2 col-form-label">Company Name</label>
                   <div class="col-sm-6">
                     <input type="text" class="form-control" name="company_name">
                   </div>
-                  <label for="company_name" class="col-sm-2 col-form-label">Name of comapny or organization</label>
+                  <label for="inputNumber" class="col-sm-4 col-form-label">Name of comapny or organization </label>
                  </div>
-                <div class="row mb-3">
+                <div class="row mb-0">
                   <label for="zip_code" class="col-sm-2 col-form-label">Zip Code</label>
                   <div class="col-sm-6">
                     <input type="text" class="form-control" name="zip_code">
                   </div>
-                  <label for="zip_code" class="col-sm-2 col-form-label">Code according to sorting centers post</label>
+                  <label for="inputNumber" class="col-sm-4 col-form-label">Code according to sorting centers post </label>
                 </div>
-                <div class="row mb-3">
+                <div class="row mb-0">
                   <label for="city" class="col-sm-2 col-form-label">City</label>
                   <div class="col-sm-6">
                     <input type="text" class="form-control" name="city">
                   </div>
-                  <label for="city" class="col-sm-2 col-form-label">City or Region</label>
+                  <label for="inputNumber" class="col-sm-4 col-form-label">City or Region</label>
                </div>
-                  <div class="row mb-3">
+                  <div class="row mb-0">
                   <label for="street_name" class="col-sm-2 col-form-label">Street Name</label>
                   <div class="col-sm-6">
                     <input type="text" class="form-control" name="street_name">
                   </div>
-                  <label for="street_name" class="col-sm-2 col-form-label">
-                    Name of the street
-                  </label>
+                  <label for="inputNumber" class="col-sm-4 col-form-label">Name of the street </label>
                 </div>
-                <div class="row mb-3">
+                <div class="row mb-0">
                   <label for="street_number" class="col-sm-2 col-form-label">Street Number</label>
                   <div class="col-sm-6">
                     <input type="text" class="form-control" name="street_number">
                   </div>
-                  <label for="street_number" class="col-sm-2 col-form-label">
-                    House number or number within the industrial zone
-                  </label>
+                  <label for="inputNumber" class="col-sm-4 col-form-label"> House number or number within the industrial zone </label>
                 </div>
-                <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Submit</label>
-                  <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Submit Data</button>
+                <div class="row mb-0">
+                  <div class="col-sm-10" align="right">
+                    <button type="submit" class="btn btn-outline-primary" i class="fa-thin fa-check">Save</button>
                   </div>
                 </div>
-                  </div>
-                </div>
-                
                </form>
             
-            </div>
-          </div>
+         
 
-        </div>
-      </div>
+       
     </section>
 
   </main><!-- End #main -->

@@ -55,7 +55,6 @@ class Product extends Model
         'configuration',
         'specification_text',
         'td_object',
-
     ];
 
 }

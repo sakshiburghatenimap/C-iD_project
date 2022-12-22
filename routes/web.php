@@ -18,7 +18,7 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('myprofile');
 });
 
 
@@ -31,11 +31,10 @@ Route::get('registration', [UserauthController::class, 'registration'])->name('r
 Route::post('custom-registration', [UserauthController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [UserauthController::class, 'signOut'])->name('signout');
 
+Route::get('myprofile', [UserauthController::class, 'myprofile']); 
 
 /*-------------------------Product Routes--------------------------------------------------*/
 
 
 Route::resource('products', ProductController::class);
 
-
-/*--------------------Main menu----------------------------------------*/

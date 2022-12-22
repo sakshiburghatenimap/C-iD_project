@@ -92,4 +92,8 @@ class UserauthController extends Controller
   
         return Redirect('login');
     }
+
+     public function myprofile(){
+        return view('users.myprofile');
+     }
 }
