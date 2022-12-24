@@ -18,8 +18,9 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-    return view('myprofile');
+    return view('welcome');
 });
+
 
 
 /*-----------------------------------Users Routes----------------------------------------*/

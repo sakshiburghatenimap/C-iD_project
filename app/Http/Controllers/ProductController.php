@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function index()
      { 
-        $data->setConnection('mysql2');
+        
             $data['products'] = Product::orderBy('id','desc')->paginate(5);
             return view('products.index', $data);
      }

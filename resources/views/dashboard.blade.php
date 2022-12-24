@@ -243,15 +243,12 @@ body {
         <li class="nav-item dropdown pe-3">
           
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <span class="">Sakshi</span>
+            <span>{{ Auth::user()->name }}</span>|<span>{{ Auth::user()->user_role }}</span>
             <img src="assets/img/icon user.png" alt="Profile" class="rounded-circle">
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </a><!-- End Profile Iamge Icon -->
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>Sakshi</h6>
-              <span>Developer</span>
-            </li>
+            
             <li>
               <hr class="dropdown-divider">
             </li>

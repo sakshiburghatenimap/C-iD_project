@@ -222,22 +222,38 @@ body {
 
 
 
-    <nav class="header-nav ms-auto">
+<nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
-        <li class="nav-item dropdown">
-        </li><!-- End Notification Nav -->
-        <li class="nav-item dropdown pe-3">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+          </ul><!-- End Messages Dropdown Items -->
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <span class="">Sakshi</span>
-            <img src="assets/img/icon user.png" alt="Profile" class="rounded-circle">
+          <span> {{ Auth::user()->name }}</span>| <span> {{ Auth::user()->user_role }}</span>
+            <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle">  
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </a><!-- End Profile Iamge Icon -->
-          
-</li>
-      </ul>
-    </nav><!-- End Icons Navigation -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="/myprofile">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="/login">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+    </nav><!-- End Icons Navigation-->
+   
 
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
   <main id="main" class="main">
   
     <div class="pagetitle">

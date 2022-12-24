@@ -56,7 +56,7 @@
   <div class="d-flex align-items-center justify-content-between">
   <a href="index.html" class="logo d-flex align-items-center">
     <img src="assets/img/logo.png" alt="">
-    <span class="d-none d-lg-block">Product Data Library</span>
+   
   </a>
   
 </div><!-- End Logo -->
@@ -78,15 +78,11 @@
         </li><!-- End Search Icon-->
           </ul><!-- End Messages Dropdown Items -->
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-          <span class="d-none d-md-block dropdown-toggle ps-2">Sakshi</span>
+          <span> {{ Auth::user()->name }}</span>| <span> {{ Auth::user()->user_role }}</span>
             <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle">  
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </a><!-- End Profile Iamge Icon -->
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>Sakshi</h6>
-              <span>Developer</span>
-            </li>
             <li>
               <a class="dropdown-item d-flex align-items-center" href="/myprofile">
                 <i class="bi bi-person"></i>
@@ -162,9 +158,8 @@
       <h1>Create Product</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Product data Library</a></li>
-          <li class="breadcrumb-item">list of products</li>
-          <li class="breadcrumb-item active">Create product</li>
+          <li class="breadcrumb-item">Product data library</li>
+           <li>&nbsp> Product details</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -175,8 +170,7 @@
 
           
             <div class="card-body">
-              <h5 class="card-title">Create new Product data</h5>
-
+            
               <!-- General Form Elements -->
               <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
               @csrf

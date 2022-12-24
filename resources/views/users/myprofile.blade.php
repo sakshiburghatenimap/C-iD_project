@@ -71,15 +71,12 @@
         </li><!-- End Search Icon-->
           </ul><!-- End Messages Dropdown Items -->
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-          <span class="d-none d-md-block dropdown-toggle ps-2">Sakshi</span>
+           <span> {{ Auth::user()->name }}</span>|<span>{{ Auth::user()->user_role }}</span>
             <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle">
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </a><!-- End Profile Iamge Icon -->
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>Sakshi</h6>
-              <span>Developer</span>
-            </li>
+           
             <li>
               <a class="dropdown-item d-flex align-items-center" href="/myprofile">
                 <i class="bi bi-person"></i>
@@ -96,11 +93,8 @@
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
 
-    
     </nav><!-- End Icons Navigation -->
-
   </header><!-- End Header -->
-
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar" background image="{{ asset('assets/img/C-iD platform background green.jpg') }}">
 
@@ -152,21 +146,16 @@
 </div></br>
     </ul>
       </li><!-- End Components Nav -->
-
-    
-    
-
   </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>My Profile</h1>
+     
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">My Profile</a></li>
-          <li class="breadcrumb-item">Sakshi</li>
-         
+          <li class="breadcrumb-item"><a href="myprofile">My Profile</a></li>
+          <li>&nbsp >{{ Auth::user()->name }}</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
