@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,7 +79,6 @@
         </li><!-- End Search Icon-->
           </ul><!-- End Messages Dropdown Items -->
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-          <span> {{ Auth::user()->name }}</span>| <span> {{ Auth::user()->user_role }}</span>
             <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle">  
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </a><!-- End Profile Iamge Icon -->
@@ -177,7 +177,7 @@
                 <div class="row mb-0">
                   <label for="inputText" class="col-sm-2 col-form-label">Product Name</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="product_name" name="product_name">
+                    <input type="text" class="form-control" id="pname" name="pname">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Must Contain min 5 char</label>
                 </div>
@@ -192,100 +192,99 @@
                   <div class="col-sm-6">
                     <select class="form-select" aria-label="Default select example" id="category" name="category">
                       <option selected>Open this select menu</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <option value="One">One</option>
+                      <option value="Two">Two</option>
+                      <option value="Three">Three</option>
                     </select>
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Type</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="product_type" name="product_type">
+                    <select class="form-select" aria-label="Default select example" id="type" name="type">
                       <option selected>Open this select menu</option>
-                      <option value="1">0* elements for volumes (siting)</option>
-                      <option value="2">00 Rooms (indoor and outdoor areas)</option>
-                      <option value="3">1* elements for foundation</option>
-                      <option value="4">11 Groundwork (soil)</option>
-                      <option value="5">13 Floors on foundation (slabs on grade)</option>
-                      <option value="6">16 Foundation structures and footing, retaining walls (frost walls)</option>
-                      <option value="7">17 Pile foundations</option>
-                      <option value="8">"2* composite elements / components (++ = including 4* and 3*)</option>
-                      <option value="9">21++ Exterior walls (facades)</option>
-                      <option value="10">22++ Interior walls (interior walls)</option>
-                      <option value="11">23++ Floors (intermediate floors, gallery floors, balconies and landings)</option>
-                      <option value="12">24++ Stairs and ramps</option>
-                      <option value="13">27++ Roofs (sloping and flat roofs)</option>
-                      <option value="14">28 Main supporting structures, columns and beams (structure)</option>
-                      <option value="15">3* partial elements (+ = including 4*)</option>
-                      <option value="16">31+ Exterior wall openings</option>
-                      <option value="17">31.1+ Outer wall openings with passage</option>
-                      <option value="18">31.2+ Exterior windows</option>
-                      <option value="19">31.4+ Curtain wall (facade framework)</option>
-                      <option value="20">32+ Interior wall openings</option>
-                      <option value="21">32.1+ Inner wall openings with passage</option>
-                      <option value="22">32.2+ Interior windows</option>
-                      <option value="23">32.3+ Interior doors</option>
-                      <option value="24">32.4+ Modular walls (partition walls)</option>
-                      <option value="25">33+ Floor openings (stair hatch)</option>
-                      <option value="26">34+ Handrails (stairs, landing)</option>
-                      <option value="27">35+ Suspended ceilings (suspended ceilings)</option>
-                      <option value="28">37+ Roof openings (roof windows)</option>
-                      <option value="29">38+ Balustrades (horizontal parapet)</option>
-                      <option value="30">4* elements for finishing or cladding</option>
-                      <option value="31">41 Exterior wall finishes (exterior wall cladding)</option>
-                      <option value="32">42 Interior wall finishes (facing walls)</option>
-                      <option value="33">43 Floor finishes (top surface)</option>
-                      <option value="34">44 Stair and ramp finishes (top finish)</option>
-                      <option value="35">45 Ceiling finishes</option>
-                      <option value="36">47 Roof finishes (roof cladding)</option>
-                      <option value="37">5* elements for plumbing installations</option>
-                      <option value="38">51 heating (heat generation)</option>
-                      <option value="39">52 drain (collection)</option>
-                      <option value="40">53 supply (water)</option>
-                      <option value="41">54 gases</option>
-                      <option value="42">55 cooling (cold generation)</option>
-                      <option value="43">56 heat distribution (output)</option>
-                      <option value="44">57 air treatment (ventilation)</option>
-                      <option value="45">58 climate control</option>
-                      <option value="46">6* elements for electrical installations</option>
-                      <option value="47">61 central electrotechnical facilities (installation)</option>
-                      <option value="48">62 power current (wiring)</option>
-                      <option value="49">63 lighting</option>
-                      <option value="50">64 communication</option>
-                      <option value="51">65 security</option>
-                      <option value="52">66 transport (elevator)</option>
-                      <option value="53">68 automation (domotics, AI, etc.)</option>
-                      <option value="54">7* elements for fixed inventory or rooms</option>
-                      <option value="55">71 circulation (passageway, traffic, etc.)</option> 
-                      <option value="56">72 use (living room, bedroom, office, etc.)</option>
-                      <option value="57">73 food (kitchen)</option>
-                      <option value="58">74 hygiene and care (sanitary, bathroom, toilet, etc.)</option>
-                      <option value="59">75 cleaning and maintenance (cleaning, laundry room, technical room, etc.)</option>
-                      <option value="60">76 storage (storage room, attic, garage, etc.)</option>
-                      <option value="61">8* elements for movable inventory or furniture</option>
-                      <option value="62">81 circulation (ladder)</option>
-                      <option value="63">82 use (seat, bed, desk, etc.)</option>
-                      <option value="64">83 food (dining table)</option>
-                      <option value="65">84 hygiëne en verzorging (hangtoilet, douche, …)</option>
-                      <option value="66">85 cleaning and maintenance (washing machine)</option>
-                      <option value="67">86 storage and screening (rack)</option>
-                      <option value="68">9* elements for grounds (exterior)</option>
-                      <option value="69">91 ground (surfaces)</option>
-                      <option value="70">92 structures (pergolas)</option>
-                      <option value="71">93 enclosure (fences)</option>
-                      <option value="72">94 finish (decking)</option>
-                      <option value="73">95 plumbing equipment (sewers, rainwater well, etc.)</option>
-                      <option value="74">96 electrical equipment (solar panel, windmill, etc.)</option>
-                      <option value="75">97 outdoor furnishing (garden furniture, bicycle shed, etc.)</option>
-                    
+                      <option value="0* elements for volumes (siting)">0* elements for volumes (siting)</option>
+                      <option value="00 Rooms (indoor and outdoor areas)">00 Rooms (indoor and outdoor areas)</option>
+                      <option value="1* elements for foundation">1* elements for foundation</option>
+                      <option value="11 Groundwork (soil)">11 Groundwork (soil)</option>
+                      <option value="13 Floors on foundation (slabs on grade)">13 Floors on foundation (slabs on grade)</option>
+                      <option value="16 Foundation structures and footing, retaining walls (frost walls)">16 Foundation structures and footing, retaining walls (frost walls)</option>
+                      <option value="17 Pile foundations">17 Pile foundations</option>
+                      <option value="2* composite elements / components (++ = including 4* and 3*)">2* composite elements / components (++ = including 4* and 3*)</option>
+                      <option value="21++ Exterior walls (facades)">21++ Exterior walls (facades)</option>
+                      <option value="22++ Interior walls (interior walls)">22++ Interior walls (interior walls)</option>
+                      <option value="23++ Floors (intermediate floors, gallery floors, balconies and landings)">23++ Floors (intermediate floors, gallery floors, balconies and landings)</option>
+                      <option value="24++ Stairs and ramps">24++ Stairs and ramps</option>
+                      <option value="27++ Roofs (sloping and flat roofs)">27++ Roofs (sloping and flat roofs)</option>
+                      <option value="28 Main supporting structures, columns and beams (structure)">28 Main supporting structures, columns and beams (structure)</option>
+                      <option value="3* partial elements (+ = including 4*)">3* partial elements (+ = including 4*)</option>
+                      <option value="31+ Exterior wall openings">31+ Exterior wall openings</option>
+                      <option value="31.1+ Outer wall openings with passage">31.1+ Outer wall openings with passage</option>
+                      <option value="31.2+ Exterior windows">31.2+ Exterior windows</option>
+                      <option value="31.4+ Curtain wall (facade framework)">31.4+ Curtain wall (facade framework)</option>
+                      <option value="32+ Interior wall openings">32+ Interior wall openings</option>
+                      <option value="32.1+ Inner wall openings with passage">32.1+ Inner wall openings with passage</option>
+                      <option value="32.2+ Interior windows">32.2+ Interior windows</option>
+                      <option value="32.3+ Interior doors">32.3+ Interior doors</option>
+                      <option value="32.4+ Modular walls (partition walls)">32.4+ Modular walls (partition walls)</option>
+                      <option value="33+ Floor openings (stair hatch)">33+ Floor openings (stair hatch)</option>
+                      <option value="34+ Handrails (stairs, landing)">34+ Handrails (stairs, landing)</option>
+                      <option value="35+ Suspended ceilings (suspended ceilings)">35+ Suspended ceilings (suspended ceilings)</option>
+                      <option value="37+ Roof openings (roof windows)">37+ Roof openings (roof windows)</option>
+                      <option value="38+ Balustrades (horizontal parapet)">38+ Balustrades (horizontal parapet)</option>
+                      <option value="4* elements for finishing or cladding">4* elements for finishing or cladding</option>
+                      <option value="41 Exterior wall finishes (exterior wall cladding)">41 Exterior wall finishes (exterior wall cladding)</option>
+                      <option value="42 Interior wall finishes (facing walls)">42 Interior wall finishes (facing walls)</option>
+                      <option value="43 Floor finishes (top surface)">43 Floor finishes (top surface)</option>
+                      <option value="44 Stair and ramp finishes (top finish)">44 Stair and ramp finishes (top finish)</option>
+                      <option value="45 Ceiling finishes">45 Ceiling finishes</option>
+                      <option value="47 Roof finishes (roof cladding)">47 Roof finishes (roof cladding)</option>
+                      <option value="5* elements for plumbing installations">5* elements for plumbing installations</option>
+                      <option value="51 heating (heat generation)">51 heating (heat generation)</option>
+                      <option value="52 drain (collection)">52 drain (collection)</option>
+                      <option value="53 supply (water)">53 supply (water)</option>
+                      <option value="54 gases">54 gases</option>
+                      <option value="55 cooling (cold generation)">55 cooling (cold generation)</option>
+                      <option value="56 heat distribution (output)">56 heat distribution (output)</option>
+                      <option value="57 air treatment (ventilation)">57 air treatment (ventilation)</option>
+                      <option value="58 climate control">58 climate control</option>
+                      <option value="6* elements for electrical installations">6* elements for electrical installations</option>
+                      <option value="61 central electrotechnical facilities (installation)">61 central electrotechnical facilities (installation)</option>
+                      <option value="62 power current (wiring)">62 power current (wiring)</option>
+                      <option value="63 lighting">63 lighting</option>
+                      <option value="64 communication">64 communication</option>
+                      <option value="65 security">65 security</option>
+                      <option value="66 transport (elevator)">66 transport (elevator)</option>
+                      <option value="68 automation (domotics, AI, etc.)">68 automation (domotics, AI, etc.)</option>
+                      <option value="7* elements for fixed inventory or rooms">7* elements for fixed inventory or rooms</option>
+                      <option value="71 circulation (passageway, traffic, etc.)">71 circulation (passageway, traffic, etc.)</option> 
+                      <option value="72 use (living room, bedroom, office, etc.)">72 use (living room, bedroom, office, etc.)</option>
+                      <option value="73 food (kitchen)">73 food (kitchen)</option>
+                      <option value="74 hygiene and care (sanitary, bathroom, toilet, etc.)">74 hygiene and care (sanitary, bathroom, toilet, etc.)</option>
+                      <option value="75 cleaning and maintenance (cleaning, laundry room, technical room, etc.)">75 cleaning and maintenance (cleaning, laundry room, technical room, etc.)</option>
+                      <option value="76 storage (storage room, attic, garage, etc.)">76 storage (storage room, attic, garage, etc.)</option>
+                      <option value="8* elements for movable inventory or furniture">8* elements for movable inventory or furniture</option>
+                      <option value="81 circulation (ladder)">81 circulation (ladder)</option>
+                      <option value="82 use (seat, bed, desk, etc.)">82 use (seat, bed, desk, etc.)</option>
+                      <option value="83 food (dining table)">83 food (dining table)</option>
+                      <option value="84 hygiëne en verzorging (hangtoilet, douche, …)">84 hygiëne en verzorging (hangtoilet, douche, …)</option>
+                      <option value="85 cleaning and maintenance (washing machine)">85 cleaning and maintenance (washing machine)</option>
+                      <option value="86 storage and screening (rack)">86 storage and screening (rack)</option>
+                      <option value="9* elements for grounds (exterior)">9* elements for grounds (exterior)</option>
+                      <option value="91 ground (surfaces)">91 ground (surfaces)</option>
+                      <option value="92 structures (pergolas)">92 structures (pergolas)</option>
+                      <option value="93 enclosure (fences)">93 enclosure (fences)</option>
+                      <option value="94 finish (decking)">94 finish (decking)</option>
+                      <option value="95 plumbing equipment (sewers, rainwater well, etc.)">95 plumbing equipment (sewers, rainwater well, etc.)</option>
+                      <option value="96 electrical equipment (solar panel, windmill, etc.)">96 electrical equipment (solar panel, windmill, etc.)</option>
+                      <option value="97 outdoor furnishing (garden furniture, bicycle shed, etc.)">97 outdoor furnishing (garden furniture, bicycle shed, etc.)</option>
                     </select>
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Product Image</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="product_image" name="product_image">
+                    <input class="form-control" type="file" id="image" name="image" multiple>
                   </div>
                 </div>
                 <div class="row mb-0">
@@ -298,13 +297,13 @@
                 <div class="row mb-0">
                   <label for="inputDate" class="col-sm-2 col-form-label">Model year</label>
                   <div class="col-sm-6">
-                    <input type="date" class="form-control" id="model_year" name="model_year">
+                    <input type="date" class="form-control" id="year" name="year">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Product code</label>
                   <div class="col-sm-6">
-                    <input type="number" class="form-control" id="product_code" name="product_code">
+                    <input type="number" class="form-control" id="code" name="code">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Valid code 3 digit</label>
                 </div>
@@ -312,14 +311,14 @@
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Selling price</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="selling_price" name="selling_price">
+                    <input type="text" class="form-control" id="sprice" name="sprice">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Valid price must contain numbers</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Calculation price</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="calculation_price" name="calculation_price">
+                    <input type="text" class="form-control" id="cprice" name="cprice">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Valid price must contain numbers</label>
                 </div>
@@ -333,32 +332,32 @@
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Maintenance Sheet</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="maintenance_sheet" name="maintenance_sheet">
+                    <input class="form-control" type="file" id="msheet" name="msheet">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Installation Sheet</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="installation_sheet" name="installation_sheet">
+                    <input class="form-control" type="file" id="isheet" name="isheet">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Brand logo</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="brand_log" name="brand_log">
+                    <input class="form-control" type="file" id="blogo" name="blogo">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputText" class="col-sm-2 col-form-label">Expected life span</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="life_span" name="life_span">
+                    <input type="text" class="form-control" id="span" name="span">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Life cycle </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputText" class="col-sm-2 col-form-label">Environmental score</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="env_score"  name="env_score">
+                    <input type="text" class="form-control" id="score"  name="score">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid score must be in number</label>
                 </div>
@@ -366,13 +365,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Energy neutral</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="energy_neutral" id="energy_neutral" value="yes">
+                      <input class="form-check-input" type="radio" name="energyn" id="energyn" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="energy_neutral" id="energy_neutral" value="no">
+                      <input class="form-check-input" type="radio" name="energyn" id="energyn" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -456,13 +455,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Pace-Layering</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="pace_layering" id="pace_layering" value="yes">
+                      <input class="form-check-input" type="radio" name="pacel" id="pacel" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="pace_layering" id="pace_layering" value="no">
+                      <input class="form-check-input" type="radio" name="pacel" id="pacel" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -474,13 +473,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Recycle Content</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="recycled_content" id="recycled_content" value="yes">
+                      <input class="form-check-input" type="radio" name="recycled" id="recycled" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="recycled_content" id="recycled_content" value="no">
+                      <input class="form-check-input" type="radio" name="recycled" id="recycled" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -510,13 +509,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Extendable life</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="extendable_life" id="extendable_life" value="yes">
+                      <input class="form-check-input" type="radio" name="extendable" id="extendable" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="extendable_life" id="extendable_life" value="no">
+                      <input class="form-check-input" type="radio" name="extendable" id="extendable" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -532,122 +531,108 @@
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Website Brand</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="website_brand" name="website_brand">
+                    <input type="text" class="form-control" id="website" name="website">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid brand Website</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Bearing capacity</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="bearing_capacity" name="bearing_capacity">
+                    <input type="text" class="form-control" id="bearing" name="bearing">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">U-value</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="u-value" name="u-value">
+                    <input type="text" class="form-control" id="value" name="value">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid U-value of product</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Sound insulation</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="sound_insulation" name="sound_insulation">
+                    <input type="text" class="form-control" id="soundi" name="soundi">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Fire resistance</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="fire_resistance" name="fire_resistance">
+                    <input type="text" class="form-control" id="resistance" name="resistance">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Lenght-X max</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="length_x" name="length_x">
+                    <input type="text" class="form-control" id="length" name="length">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">lenght in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Height-Y max</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="height_y" name="height_y">
+                    <input type="text" class="form-control" id="height" name="height">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Height in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Weight-Z max</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="width_z" name="width_z">
+                    <input type="text" class="form-control" id="weight" name="weight">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Weigth in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Construction method</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="construction_method" name="construction_method">
+                    <select class="form-select" aria-label="Default select example" id="method" name="method">
                       <option selected>Select method</option>
-                      <option value="1">Assembly</option>
-                      <option value="2">Skeleton</option>
-                      <option value="3">3D volumetric (unit)</option>
-                       <option value="4">Cast in place (formwork)</option>
+                      <option value="Assembly">Assembly</option>
+                      <option value="Skeleton">Skeleton</option>
+                      <option value="3D volumetric (unit)">3D volumetric (unit)</option>
+                       <option value="Cast in place (formwork)">Cast in place (formwork)</option>
                     </select>
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Building System</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="building_system" name="building_system">
+                    <select class="form-select" aria-label="Default select example" id="system" name="system">
                       <option selected>Select Sytem</option>
-                      <option value="1">OBase building and fit-outne</option>
-                      <option value="2">Load-bearing exterior walls</option>
-                      <option value="3">Non load-bearing partition walls</option>
+                      <option value="OBase building and fit-outne">OBase building and fit-outne</option>
+                      <option value="Load-bearing exterior walls">Load-bearing exterior walls</option>
+                      <option value="Non load-bearing partition walls">Non load-bearing partition walls</option>
                     </select>
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Construction type</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="construction_type" name="construction_type">
+                    <select class="form-select" aria-label="Default select example" id="ctype" name="ctype">
                       <option selected>Open this select menu</option>
-                      <option value="1">Timber</option>
-                      <option value="2">CLT</option>
-                      <option value="3">Concrete</option>
-                      <option value="3">Steel</option>
-                      <option value="3">Aluminum</option>
-                      <option value="3">Hybrid</option>
-                      <option value="3">other</option>
+                      <option value="Timber">Timber</option>
+                      <option value="CLT">CLT</option>
+                      <option value="Concrete">Concrete</option>
+                      <option value="Steel">Steel</option>
+                      <option value="Aluminum">Aluminum</option>
+                      <option value="Hybrid">Hybrid</option>
+                      <option value="other">other</option>
                     </select>
                   </div>
                 </div>
                 <div class="row mb-0">
-                  <label class="col-sm-2 col-form-label">Interior finish</label>
+                  <label class="col-sm-2 col-form-label">Interior finish/exterior cladding</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="interior_finish" name="interior_finish">
+                    <select class="form-select" aria-label="Default select example" id="ifinish" name="ifinish">
                       <option selected>Open this select menu</option>
-                      <option value="1">Aluminium</option>
-                      <option value="2">Concrete</option>
-                      <option value="3">Synthetic</option>
-                      <option value="4">Steel</option>
-                      <option value="5">Stone</option>
-                      <option value="6">other</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row mb-0">
-                  <label class="col-sm-2 col-form-label">Exterior Cladding</label>
-                  <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="exterior_cladding" name="exterior_cladding">
-                      <option selected>Open this select menu</option>
-                      <option value="1">Aluminium</option>
-                      <option value="2">Concrete</option>
-                      <option value="3">Synthetic</option>
-                      <option value="4">Steel</option>
-                      <option value="5">Stone</option>
-                      <option value="6">other</option>
+                      <option value="Aluminium">Aluminium</option>
+                      <option value="Concrete">Concrete</option>
+                      <option value="Synthetic">Synthetic</option>
+                      <option value="Steel">Steel</option>
+                      <option value="Stone">Stone</option>
+                      <option value="other">other</option>
                     </select>
                   </div>
                 </div>
@@ -656,25 +641,25 @@
                   <div class="col-sm-6">
                     <select class="form-select" aria-label="Default select example" id="color" name="color">
                       <option selected>Open this select menu</option>
-                      <option value="1">White</option>
-                      <option value="2">Yellow</option>
-                      <option value="3">Orange</option>
-                      <option value="4">Pink</option>
-                      <option value="5">Red</option>
-                      <option value="6">Voilet</option>
-                      <option value="7">Turquoise</option>
-                      <option value="8">Green</option>
-                      <option value="9">Brown</option>
-                      <option value="10">Gray</option>
-                      <option value="11">Black</option>
-                      <option value="12">Mixed colours</option>
+                      <option value="White">White</option>
+                      <option value="Yellow">Yellow</option>
+                      <option value="Orange">Orange</option>
+                      <option value="Pink">Pink</option>
+                      <option value="Red">Red</option>
+                      <option value="Voilet">Voilet</option>
+                      <option value="Turquoise">Turquoise</option>
+                      <option value="Green">Green</option>
+                      <option value="Brown">Brown</option>
+                      <option value="Gray">Gray</option>
+                      <option value="Black">Black</option>
+                      <option value="Mixed colours">Mixed colours</option>
                     </select>
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Designed by</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="designed_by" name="designed_by">
+                    <input type="text" class="form-control" id="designed" name="designed">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Name of designer </label>
                 </div>
@@ -688,14 +673,14 @@
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Specification text</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control"  id="specification_text" name="specification_text">
+                    <input type="text" class="form-control"  id="specification" name="specification">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Some descriptive text </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">3D object</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="td_object" name="td_object">
+                    <input class="form-control" type="file" id="object" name="object">
                   </div>
                 </div>  
                 <div class="row mb-0">
@@ -733,3 +718,5 @@
 </body>
 
 </html>
+
+

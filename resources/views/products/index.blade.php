@@ -232,7 +232,6 @@ body {
         </li><!-- End Search Icon-->
           </ul><!-- End Messages Dropdown Items -->
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-          <span> {{ Auth::user()->name }}</span>| <span> {{ Auth::user()->user_role }}</span>
             <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle">  
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </a><!-- End Profile Iamge Icon -->
@@ -287,7 +286,7 @@ body {
                 <div class="card">
                 @foreach ($products as $product)
                 
-                {{ $product->product_image }}
+                {{ $product->image }}
             
                 <div style="margin:5px 0;">
                     <a href="#"></a> 
@@ -323,3 +322,14 @@ body {
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
