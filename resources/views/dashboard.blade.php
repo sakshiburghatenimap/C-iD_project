@@ -279,7 +279,7 @@ body {
         
         <ol class="breadcrumb">
          
-          <li class="breadcrumb-item active">HELLO Sakshi..!</li>
+          <li class="breadcrumb-item active">HELLO {{ Auth::user()->name }}..!</li>
         </ol>
       </nav>
       

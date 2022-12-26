@@ -11,6 +11,7 @@ class ProductController extends Controller
 {
     public function index()
     {
+        $products=Product::all()->count();
         $products = Product::latest()->paginate(5);
     
         return view('products.index',compact('products'))
@@ -26,6 +27,12 @@ class ProductController extends Controller
     {
         
         Product::create($request->all());
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $productImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $productImage);
+            $input['image'] = "$productImage";
+        }
      
         return redirect()->route('products.index')
                         ->with('success','Product created successfully.');

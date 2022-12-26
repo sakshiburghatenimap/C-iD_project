@@ -155,7 +155,7 @@
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="myprofile">My Profile</a></li>
-          <li>&nbsp >{{ Auth::user()->name }}</li>
+          <li>&nbsp > {{ Auth::user()->name }}</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -163,7 +163,7 @@
     <section class="section">
     <div class="row mb-0">
                   <div class="col-sm-10" align="right">
-                    <button type="submit" class="btn btn-outline-primary" i class="fa-thin fa-check">Save</button>
+                    <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>
       <div class="row">
@@ -297,7 +297,7 @@
                 </div>
                 <div class="row mb-0">
                   <div class="col-sm-10" align="right">
-                    <button type="submit" class="btn btn-outline-primary" i class="fa-thin fa-check">Save</button>
+                    <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>
                </form>

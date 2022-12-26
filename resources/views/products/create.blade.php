@@ -63,10 +63,7 @@
 </div><!-- End Logo -->
 
     <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
+      
     </div><!-- End Search Bar -->
 
     <nav class="header-nav ms-auto">
@@ -74,12 +71,13 @@
 
         <li class="nav-item d-block d-lg-none">
           <a class="nav-link nav-icon search-bar-toggle " href="#">
-            <i class="bi bi-search"></i>
+           
           </a>
         </li><!-- End Search Icon-->
           </ul><!-- End Messages Dropdown Items -->
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle">  
+            <span>{{ Auth::user()->name }}</span>|<span>{{ Auth::user()->user_role }}</span> 
+            <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle"> 
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </a><!-- End Profile Iamge Icon -->
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -155,7 +153,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Create Product</h1>
+    
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item">Product data library</li>
@@ -165,10 +163,13 @@
     </div><!-- End Page Title -->
 
     <section class="section">
+         <div class="row mb-0">
+                  <div class="col-sm-10" align="right">
+                    <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
+                  </div>
+                </div>
       <div class="row">
         <div class="col-lg-12">
-
-          
             <div class="card-body">
             
               <!-- General Form Elements -->
@@ -684,10 +685,11 @@
                   </div>
                 </div>  
                 <div class="row mb-0">
-                  <div class="col-sm-8" align="right">
-                    <button type="submit"  class="btn btn-outline-primary">Save</button>
+                  <div class="col-sm-10" align="right">
+                    <button type="submit"  class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>
+                
                 </form>
                   </div>
                 </div>

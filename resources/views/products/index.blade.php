@@ -215,7 +215,7 @@ body {
 <div class="d-flex align-items-center justify-content-between">
   <a href="index.html" class="logo d-flex align-items-center">
     <img src="assets/img/logo.png" alt="">
-    <span class="d-none d-lg-block">Product Data Library</span>
+   
   </a>
   
 </div><!-- End Logo -->
@@ -232,7 +232,8 @@ body {
         </li><!-- End Search Icon-->
           </ul><!-- End Messages Dropdown Items -->
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle">  
+          <span>{{ Auth::user()->name }}</span>|<span>{{ Auth::user()->user_role }}</span> 
+            <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle"> 
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </a><!-- End Profile Iamge Icon -->
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -256,14 +257,9 @@ body {
   <main id="main" class="main">
   
     <div class="pagetitle">
-    <h1><a class="breadcrumb-item">List of products & groups</li></h1>
-      <nav>
-        <ol class="breadcrumb">
-         <h6>1 items</h6>
-        </ol>
+    <h1><a class="breadcrumb-item"><u>Product Data Library</u></li> > </h1>
     </div><!-- End Page Title -->
-</div>
-      </nav>
+    </div>
     <section class="section dashboard">
       <div class="row">
 
@@ -275,35 +271,46 @@ body {
            
         <!-- Right side columns -->
         <div class="col-lg-4">
-       
-        <button type="button" class="btn btn-outline-primary" onClick="window.location.href='products/create';" width="250px">Create new product data</button> 
- 
+        <button type="button" class="btn btn-outline-primary" onClick="window.location.href='products/create';" width="250px"><i class="fa fa-plus"></i>Create new product data</button> 
         </div>
-    </section>
-            <!-- Sales Card -->
-        <form>
-          @csrf
-                <div class="card">
-                @foreach ($products as $product)
-                
-                {{ $product->image }}
-            
-                <div style="margin:5px 0;">
-                    <a href="#"></a> 
-                    <a href="#"></a>  
-                    <a href="#"></a>  
-                    <a href="#"></a> 
-                </div>
-                <div>
-                    <span>{{ $product->brand }}</span></br>
-                    <span><b>{{ $product->product_type }}</b></span></br>
-                  </div>
-                </div>
-           @endforeach
-        <!-- Right side columns -->
         
     </section>
+</br>
+</br>
+      <div> 
+      <h1><a class="#">List of Products & Groups</li></h1>
+      <nav>
+        <ol class="breadcrumb">
+         <h6>{{$products->count()}} items</h6>
+        </ol>
+    </div><!-- End Page Title -->
+</div>
+      </nav>
 
+            <!-- Sales Card -->
+        <form>
+        @foreach ($products as $product)
+        <div class="col-xxl-0 col-md-2">
+       
+           <div class="card info-card sales-card">
+           <div> 
+           <img src="assets/img/icon product data.png" width="70px" height="70px">
+           </div>
+             <div class="card-body">
+               <div class="d-flex align-items-center">
+                 <div class="ps-1" align="left">
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div><!-- End Files Card -->
+
+        <!-- Right side columns -->
+         <h6>Name:{{ $product -> pname }}</h6>
+         <h6>Type:{{ $product -> type }}</h6>
+      </br>
+          
+   @endforeach
 </form>
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
