@@ -291,10 +291,8 @@ body {
         <!-- Left side columns -->
         <div class="col-lg-8">
           <div class="row">
-
             <!-- File Card -->
             <div class="col-xxl-4 col-md-6">
-           
               <div class="card info-card sales-card">
               <div align="left"> 
                 <img src="assets/img/icon my files.png" width="20px" height="20px">

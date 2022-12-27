@@ -304,11 +304,10 @@
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Product code</label>
                   <div class="col-sm-6">
-                    <input type="number" class="form-control" id="code" name="code">
+                    <input type="text" class="form-control" id="code" name="code">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Valid code 3 digit</label>
                 </div>
-              
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Selling price</label>
                   <div class="col-sm-6">
@@ -689,7 +688,6 @@
                     <button type="submit"  class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>
-                
                 </form>
                   </div>
                 </div>

@@ -173,19 +173,20 @@
             <div class="card-body">
             
               <!-- General Form Elements -->
-              <form action="{{ route('products.index') }}" method="POST" enctype="multipart/form-data">
+              <form action="{{ route('products.update',$product->id) }}" method="POST" enctype="multipart/form-data">
               @csrf
+              @method('PUT')
                 <div class="row mb-0">
                   <label for="inputText" class="col-sm-2 col-form-label">Product Name</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="pname" name="pname">
+                    <input type="text" class="form-control" id="pname" name="pname" value="{{$product->pname}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Must Contain min 5 char</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Brand</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="brand" name="brand">
+                    <input type="text" class="form-control" id="brand" name="brand"  value="{{$product->brand}}">
                   </div>
                 </div>
                 <div class="row mb-0">
@@ -291,20 +292,20 @@
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Description</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="description" name="description">
+                    <input type="text" class="form-control" id="description" name="description"  value="{{$product->description}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Must Contain 30 char</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputDate" class="col-sm-2 col-form-label">Model year</label>
                   <div class="col-sm-6">
-                    <input type="date" class="form-control" id="year" name="year">
+                    <input type="date" class="form-control" id="year" name="year"  value="{{$product->year}}">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Product code</label>
                   <div class="col-sm-6">
-                    <input type="number" class="form-control" id="code" name="code">
+                    <input type="text" class="form-control" id="code" name="code"  value="{{$product->code}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Valid code 3 digit</label>
                 </div>
@@ -312,53 +313,53 @@
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Selling price</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="sprice" name="sprice">
+                    <input type="text" class="form-control" id="sprice" name="sprice"  value="{{$product->sprice}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Valid price must contain numbers</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Calculation price</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="cprice" name="cprice">
+                    <input type="text" class="form-control" id="cprice" name="cprice"  value="{{$product->cprice}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Valid price must contain numbers</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Maintainance Frequency</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="frequency" name="frequency">
+                    <input type="text" class="form-control" id="frequency" name="frequency"  value="{{$product->frequency}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Frequency of maintainance</label>
                  </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Maintenance Sheet</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="msheet" name="msheet">
+                    <input class="form-control" type="file" id="msheet" name="msheet"  value="{{$product->msheet}}">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Installation Sheet</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="isheet" name="isheet">
+                    <input class="form-control" type="file" id="isheet" name="isheet"  value="{{$product->isheet}}">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Brand logo</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="blogo" name="blogo">
+                    <input class="form-control" type="file" id="blogo" name="blogo"  value="{{$product->blogo}}">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputText" class="col-sm-2 col-form-label">Expected life span</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="span" name="span">
+                    <input type="text" class="form-control" id="span" name="span"  value="{{$product->span}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Life cycle </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputText" class="col-sm-2 col-form-label">Environmental score</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="score"  name="score">
+                    <input type="text" class="form-control" id="score"  name="score"  value="{{$product->score}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid score must be in number</label>
                 </div>
@@ -525,63 +526,63 @@
                   <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Manufacturer</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control"  id="manufacturer" name="manufacturer">
+                    <input type="text" class="form-control"  id="manufacturer" name="manufacturer"  value="{{$product->manufacturer}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Name of manufacturer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Website Brand</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="website" name="website">
+                    <input type="text" class="form-control" id="website" name="website"  value="{{$product->website}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid brand Website</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Bearing capacity</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="bearing" name="bearing">
+                    <input type="text" class="form-control" id="bearing" name="bearing"  value="{{$product->bearing}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">U-value</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="value" name="value">
+                    <input type="text" class="form-control" id="value" name="value"  value="{{$product->value}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid U-value of product</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Sound insulation</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="soundi" name="soundi">
+                    <input type="text" class="form-control" id="soundi" name="soundi"  value="{{$product->soundi}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Fire resistance</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="resistance" name="resistance">
+                    <input type="text" class="form-control" id="resistance" name="resistance"  value="{{$product->resistance}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Lenght-X max</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="length" name="length">
+                    <input type="text" class="form-control" id="length" name="length"  value="{{$product->length}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">lenght in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Height-Y max</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="height" name="height">
+                    <input type="text" class="form-control" id="height" name="height"  value="{{$product->height}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Height in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Weight-Z max</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="weight" name="weight">
+                    <input type="text" class="form-control" id="weight" name="weight"  value="{{$product->weight}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Weigth in mm</label>
                 </div>
@@ -660,28 +661,28 @@
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Designed by</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="designed" name="designed">
+                    <input type="text" class="form-control" id="designed" name="designed"  value="{{$product->designed}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Name of designer </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">All possible configuration</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="configuration" name="configuration">
+                    <input type="text" class="form-control" id="configuration" name="configuration"  value="{{$product->configuration}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> valid configuration </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Specification text</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control"  id="specification" name="specification">
+                    <input type="text" class="form-control"  id="specification" name="specification"  value="{{$product->specification}}">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Some descriptive text </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">3D object</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="object" name="object">
+                    <input class="form-control" type="file" id="object" name="object"  value="{{$product->object}}">
                   </div>
                 </div>  
                 <div class="row mb-0">
