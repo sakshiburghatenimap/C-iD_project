@@ -156,8 +156,40 @@ body {
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+   #rectangle{
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
 }
 </style>
+<style>
+p.ex1 {
+  border: 1px thin black;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: thin;
+  padding: top:10px ,  bottom:10px;
+  width: 280px;
+  height: 60px;
+}
+p.ex2 {
+  border: 1px thin black;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: thin;
+}
+</style>
+<style>
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: #555;
+}
+</style>
+
   <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar" background image="{{ asset('assets/img/C-iD platform background green.jpg') }}">
   
@@ -276,16 +308,17 @@ body {
       </nav>
     </div><!-- End Page Title -->
 </br>
-
     <section class="section dashboard">
       <div class="row">
       <div class="col-lg-12" align="right">   
       <a class="btn btn-outline-primary" href="{{ route('products.edit',$product->id) }}"><i class="fa fa-edit"></i>Edit product data</a>
       <a class="btn btn-outline-primary" href="#"><i class="fa fa-plus"></i>Attached new C-iD</a>
-      @csrf
-      @method('DELETE')
-      <a class="btn btn-outline-primary"><i class="fa fa-trash"></i>Delete product data</a>
     </div>
+    <form method="post" action="{{route('products.destroy',$product->id)}}">
+        @method('delete')
+        @csrf
+       <button type="submit" class="btn btn-outline-primary" width="200px"><i class="fa fa-trash"></i>Delete product data</button>
+      </form>
 </br>
 </br>
         <!-- Left side columns -->
@@ -302,16 +335,22 @@ body {
             </div><!-- End Files Card -->
             <div class="col-lg-10" align="right">
               <h6><b>Name:{{$product->pname}}</b></h6>
-              <h6>Type:{{$product->type}}</h6>
-              <h6>Brand:{{$product->brand}}</h6>
-              <h6>Description:{{$product->description}}</h6>
+              <h6><b>Type:</b>{{$product->type}}</h6>
+              <h6><b>Brand:</b>{{$product->brand}}</h6>
+              <h6><b>Description:</b>{{$product->description}}</h6>
            </div>
-            <h6>Model year:{{$product->year}}</h6>
-            <h6>Product code:{{$product->code}}</h6>
-            <h6>Selling price:{{$product->sprice}}</h6>
-            <h6>Maintainance Frequency:{{$product->frequency}}</h6>
-            <h6>Maintainance sheet:{{$product->msheet}}</h6>
-    </section>
+            <h6><i class="fa fa-star">Model year:{{$product->year}}</h6></i>
+            <h6><i class="fa fa-barcode">Product code:{{$product->code}}</h6></i>
+            <h6><i class="fa fa-building">Selling price:{{$product->sprice}}</h6></i>
+            <h6><i class="fa fa-calculator">Maintainance Frequency:{{$product->frequency}}</h6></i>
+           
+          </br>
+         </br>
+        <p class="ex1"><i class="fa fa-clipboard"></i>&nbspMaintainance sheet:</br>{{$product->msheet}}</p>
+        <p class="ex2"><i class="fa fa-wrench"></i>&nbsp Installation sheet:</br>{{$product->isheet}}</p>
+        <div class="square"><b>Brand </br>Logo</div>
+        
+        </section>
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

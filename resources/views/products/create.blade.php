@@ -156,8 +156,8 @@
     
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item">Product data library</li>
-           <li>&nbsp> Product details</li>
+          <li class="breadcrumb-item"><u><h6>Product data library</u></h6></li>
+          &nbsp> <u><h6><li>Product data</u></h6></li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
