@@ -37,11 +37,12 @@
  
   <style>
   .sidebar{
-  background-image: url('assets/img/C-iD platform background green.jpg');
+  background-image: url('/assets/img/C-iD platform background green.jpg');
   background-repeat:repeat;
   background-attachment: fixed;
   background-size: cover;
   width:150px;
+  height:100%;
 
   }
   
@@ -164,49 +165,53 @@ body {
     <ul class="sidebar-nav" id="sidebar-nav">
 <div>
       <li class="nav-item" width="55px" height="55px">  
-        <img src="assets/img/logo C-iD.png" alt="" width="55px" height="55px">          
+        <img src="assets/img/logo C-iD.png" alt="" width="45px" height="45px">          
       </li><!-- End Dashboard Nav -->
-      <li class="nav-item" width="55px" height="55px">
+      <li class="nav-item" width="45px" height="45px">
      <b><span>Dashboard</span></b>
       </li><!-- End Components Nav -->
 </div>
 </br>
+</br>
 <div>
       <li class="nav-item">
-        <img src="assets/img/icon my files.png" alt="" width="55px" height="55px">
+        <img src="assets/img/icon my files.png" alt="" width="45px" height="45px">
       </li><!-- End Forms Nav -->
       <li class="nav-item">
      <b><span>My Files</span></b>
       </li><!-- End Components Nav -->
 </div>
 </br>
+</br>
 <div>
       <li class="nav-item">
-        <img src="assets/img/icon my c-ids.png" alt="" width="55px" height="55px">
+        <img src="assets/img/icon my c-ids.png" alt="" width="45px" height="45px">
       </li><!-- End Tables Nav -->
       <li class="nav-item">
      <b><span>My C-iD's</span></b>
       </li><!-- End Components Nav -->
 </div>
 </br>
-
+</br>
 <div>
       <li class="nav-item">     
-      <img src="assets/img/icon product data library.png" alt="" width="55px" height="55px">
+      <img src="assets/img/icon product data library.png" alt="" width="45px" height="45px">
       </li><!-- End Charts Nav -->
       <li class="nav-item">
      <b><span>Product Data</span></b>
       </li><!-- End Components Nav -->
 </div></br>
 
+
 <div>
       <li class="nav-item">
-        <img src="assets/img/icon more info.png" alt="" width="55px" height="55px">    
+        <img src="assets/img/icon more info.png" alt="" width="45px" height="45px">    
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
      <b><span>More info</span></b>
       </li><!-- End Components Nav -->     
-</div></br>
+</div></br></br>
+
     </ul>
   </aside><!-- End Sidebar-->
  <!-- ======= Header ======= -->

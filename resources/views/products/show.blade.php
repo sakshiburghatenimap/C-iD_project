@@ -37,12 +37,12 @@
  
   <style>
   .sidebar{
-  background-image: url('assets/img/C-iD platform background green.jpg');
+  background-image: url('/assets/img/C-iD platform background green.jpg');
   background-repeat:repeat;
   background-attachment: fixed;
   background-size: cover;
   width:150px;
-
+  height:120%;
   }
   
 
@@ -68,7 +68,7 @@ button {
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: 20%;
   font-size: 18px;
 }
 
@@ -174,6 +174,7 @@ p.ex1 {
   padding: top:10px ,  bottom:10px;
   width: 280px;
   height: 60px;
+  
 }
 p.ex2 {
   border: 1px thin black;
@@ -189,56 +190,79 @@ p.ex2 {
   background-color: #555;
 }
 </style>
+<style>
+  .block {
+    border: 1px thin black;
+    height:100px;
+    width: 450px;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: thin;
 
-  <!-- ======= Sidebar ======= -->
+  }
+</style>
+<style>
+  .box {
+    border: 2px thin black;
+    height:400px;
+    width:450px;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: thin;
+  }
+</style>
+<!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar" background image="{{ asset('assets/img/C-iD platform background green.jpg') }}">
   
     <ul class="sidebar-nav" id="sidebar-nav">
 <div>
       <li class="nav-item" width="55px" height="55px">  
-        <img src="{{ asset('assets/img/logo C-iD.png') }}" alt="" width="55px" height="55px">          
+        <img src="{{ asset('assets/img/logo C-iD.png') }}" alt="" width="45px" height="45px">          
       </li><!-- End Dashboard Nav -->
-      <li class="nav-item" width="55px" height="55px">
+      <li class="nav-item" width="45px" height="45px">
      <b><span>Dashboard</span></b>
       </li><!-- End Components Nav -->
 </div>
 </br>
+</br>
 <div>
       <li class="nav-item">
-        <img src="{{ asset('assets/img/icon my files.png') }}" alt="" width="55px" height="55px">
+        <img src="{{ asset('assets/img/icon my files.png') }}" alt="" width="45px" height="45px">
       </li><!-- End Forms Nav -->
       <li class="nav-item">
      <b><span>My Files</span></b>
       </li><!-- End Components Nav -->
 </div>
 </br>
+</br>
 <div>
       <li class="nav-item">
-        <img src="{{ asset('assets/img/icon my c-ids.png') }}" alt="" width="55px" height="55px">
+        <img src="{{ asset('assets/img/icon my c-ids.png') }}" alt="" width="45px" height="45px">
       </li><!-- End Tables Nav -->
       <li class="nav-item">
      <b><span>My C-iD's</span></b>
       </li><!-- End Components Nav -->
 </div>
 </br>
-
+</br>
 <div>
       <li class="nav-item">     
-      <img src="{{ asset('assets/img/icon product data library.png') }}" alt="" width="55px" height="55px">
+      <img src="{{ asset('assets/img/icon product data library.png') }}" alt="" width="45px" height="45px">
       </li><!-- End Charts Nav -->
       <li class="nav-item">
      <b><span>Product Data</span></b>
       </li><!-- End Components Nav -->
 </div></br>
-
+</br>
 <div>
       <li class="nav-item">
-        <img src="{{ asset('assets/img/icon more info.png') }}" alt="" width="55px" height="55px">    
+        <img src="{{ asset('assets/img/icon more info.png') }}" alt="" width="45px" height="45px">    
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
      <b><span>More info</span></b>
       </li><!-- End Components Nav -->     
 </div></br>
+</br>
     </ul>
   </aside><!-- End Sidebar-->
  <!-- ======= Header ======= -->
@@ -313,12 +337,12 @@ p.ex2 {
       <div class="col-lg-12" align="right">   
       <a class="btn btn-outline-primary" href="{{ route('products.edit',$product->id) }}"><i class="fa fa-edit"></i>Edit product data</a>
       <a class="btn btn-outline-primary" href="#"><i class="fa fa-plus"></i>Attached new C-iD</a>
-    </div>
-    <form method="post" action="{{route('products.destroy',$product->id)}}">
+      <form method="post" action="{{route('products.destroy',$product->id)}}">
         @method('delete')
         @csrf
-       <button type="submit" class="btn btn-outline-primary" width="200px"><i class="fa fa-trash"></i>Delete product data</button>
+       <button type="submit" class="btn btn-outline-primary"><i class="fa fa-trash"></i>Delete product data</button>
       </form>
+    </div> 
 </br>
 </br>
         <!-- Left side columns -->
@@ -326,30 +350,61 @@ p.ex2 {
           <div class="row">
             
             <!-- File Card -->
-            <div class="col-xxl-3 col-md-5">
+            <div class="col-md-5 col-lg-5 col-xl-5">
               <div class="card info-card sales-card">
               <div align="left"> 
                 <img src="{{ asset('assets/img/icon my files.png') }}" width="200px" height="200px" align="center">
               </div>
             </div>
             </div><!-- End Files Card -->
-            <div class="col-lg-10" align="right">
+            <div class="col-md-7 col-lg-5 col-xl-5" align="right">
               <h6><b>Name:{{$product->pname}}</b></h6>
               <h6><b>Type:</b>{{$product->type}}</h6>
               <h6><b>Brand:</b>{{$product->brand}}</h6>
               <h6><b>Description:</b>{{$product->description}}</h6>
+           </br>
            </div>
+</br>
+           <div class="col-md-7 col-lg-5 col-xl-5" align="left">
             <h6><i class="fa fa-star">Model year:{{$product->year}}</h6></i>
             <h6><i class="fa fa-barcode">Product code:{{$product->code}}</h6></i>
             <h6><i class="fa fa-building">Selling price:{{$product->sprice}}</h6></i>
-            <h6><i class="fa fa-calculator">Maintainance Frequency:{{$product->frequency}}</h6></i>
-           
-          </br>
+            <h6><i class="fa fa-calculator">Calculation price:{{$product->cprice}}</h6></i>
+            <h6><i class="fa fa-calendar">Maintainance Frequency:{{$product->frequency}}</h6></i>
+        </div>
+         <div class="col-md-5">
+         <h6 class="block">&nbsp<i class="fa fa-leaf"></i><b>&nbspSustainability values</b>
          </br>
-        <p class="ex1"><i class="fa fa-clipboard"></i>&nbspMaintainance sheet:</br>{{$product->msheet}}</p>
+         </br>Expected life span:{{$product->span}}</br>
+         </br>Environmental score:{{$product->score}}
+          </br></h6>
+         </div>
+        <p class="ex1"><i class="fa fa-clipboard"></i>&nbspMaintainance sheet:</br>{{$product->msheet}}</p><br>
+        <div class="col-lg-5">
+          <h6 class="box">&nbsp<i class="fa fa-list"></i><b>&nbspSpecifications</b></br>
+           <br>Manufacturer:{{$product->manufacturer}}
+            <br>Website Brand:{{$product->website}}
+            <br>Bearing Capacity(kg/m):{{$product->bearing}}
+            <br>U-value(W/m2K):{{$product->value}}
+            <br>Sound Insulation:{{$product->soundi}}
+            <br>Fire Resistance:{{$product->resistance}}
+            <br>Lenght X-max(mm):{{$product->length}}
+            <br>Height Y-max(mm):{{$product->height}}
+            <br>Weight Z-max(mm):{{$product->weight}}
+            <br>Construction Method:{{$product->method}}
+            <br>Building System:{{$product->system}}
+            <br>Construction Type:{{$product->ctype}}
+            <br>Interior/External cladding:{{$product->ifinish}}
+           <br>Color:{{$product->color}}
+            <br>Designed By:{{$product->designed}}
+           <br>All possible configuration:{{$product->configuration}}
+           <br>Specification text:{{$product->specification}}
+            <br>3D object:{{$product->object}}
+          </h6>
+        </div>
         <p class="ex2"><i class="fa fa-wrench"></i>&nbsp Installation sheet:</br>{{$product->isheet}}</p>
         <div class="square"><b>Brand </br>Logo</div>
-        
+      
         </section>
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->

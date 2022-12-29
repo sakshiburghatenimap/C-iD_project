@@ -610,12 +610,21 @@ h6 {
   background-color: #f6f9ff;
 }
 
+
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 150px;
+  z-index: 1030;
+}
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
 .sidebar {
   position: fixed;
-  top: 60px;
+  top: 0px;
   left: 0;
   bottom: 0;
   width: 300px;
