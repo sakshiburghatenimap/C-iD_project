@@ -38,7 +38,6 @@
   ======================================================== -->
 </head>
 <style>
-
   .sidebar{
   background-image:url("/assets/img/C-iD platform background green.jpg");
   background-repeat:repeat;
@@ -47,8 +46,15 @@
   width:150px;
   height:100%;
   }
-  
   </style>
+
+  <style>
+    .textbox{
+      width:525px;
+      height:39px; 
+    }
+    </style>
+
 <body>
 
   <!-- ======= Header ======= -->
@@ -168,7 +174,7 @@
 
     <section class="section">
          <div class="row mb-0">
-                  <div class="col-sm-10" align="right">
+                  <div class="col-sm-12" align="right">
                     <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>
@@ -180,22 +186,23 @@
               <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
               @csrf
                 <div class="row mb-0">
-                  <label for="inputText" class="col-sm-2 col-form-label">Product Name</label>
+                  <label for="inputText" class="col-md-2 col-form-label">Product Name</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="pname" name="pname">
+                    <input type="text" class="textbox" id="pname" name="pname">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Must Contain min 5 char</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Must Contain min 5 letters</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Brand</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="brand" name="brand">
+                    <input type="text" class="textbox" id="brand" name="brand">
                   </div>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Enter the valid brand name</label>
                 </div>
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Category</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="category" name="category">
+                    <select class="textbox" aria-label="Default select example" id="category" name="category">
                       <option selected>Open this select menu</option>
                       <option value="One">One</option>
                       <option value="Two">Two</option>
@@ -206,7 +213,7 @@
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Type</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="type" name="type">
+                    <select class="textbox" aria-label="Default select example" id="type" name="type">
                       <option selected>Open this select menu</option>
                       <option value="0* elements for volumes (siting)">0* elements for volumes (siting)</option>
                       <option value="00 Rooms (indoor and outdoor areas)">00 Rooms (indoor and outdoor areas)</option>
@@ -289,79 +296,80 @@
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Product Image</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="image" name="image" multiple>
+                    <input class="textbox" type="file" id="image" name="image" multiple>
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Description</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="description" name="description">
+                    <input type="text" class="textbox" id="description" name="description">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Must Contain 30 char</label>
+                  <label for="inputNumber" class="col-sm-4 col-form-label">Must Contain 30 characters</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputDate" class="col-sm-2 col-form-label">Model year</label>
                   <div class="col-sm-6">
-                    <input type="date" class="form-control" id="year" name="year">
+                    <input type="date" class="textbox" id="year" name="year">
                   </div>
+                  <label for="inputNumber" class="col-sm-4 col-form-label">Enter in the valid format </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Product code</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="code" name="code">
+                    <input type="text" class="textbox" id="code" name="code">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Valid code 3 digit</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Selling price</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="sprice" name="sprice">
+                    <input type="text" class="textbox" id="sprice" name="sprice">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Valid price must contain numbers</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Calculation price</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="cprice" name="cprice">
+                    <input type="text" class="textbox" id="cprice" name="cprice">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Valid price must contain numbers</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Maintainance Frequency</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="frequency" name="frequency">
+                    <input type="text" class="textbox" id="frequency" name="frequency">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Frequency of maintainance</label>
                  </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Maintenance Sheet</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="msheet" name="msheet">
+                    <input class="textbox" type="file" id="msheet" name="msheet">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Installation Sheet</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="isheet" name="isheet">
+                    <input class="textbox" type="file" id="isheet" name="isheet">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Brand logo</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="blogo" name="blogo">
+                    <input class="textbox" type="file" id="blogo" name="blogo">
                   </div>
                 </div>
                 <div class="row mb-0">
                   <label for="inputText" class="col-sm-2 col-form-label">Expected life span</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="span" name="span">
+                    <input type="text" class="textbox" id="span" name="span">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Life cycle </label>
+                  <label for="inputNumber" class="col-sm-4 col-form-label">Enter the Life cycle </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputText" class="col-sm-2 col-form-label">Environmental score</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="score"  name="score">
+                    <input type="text" class="textbox" id="score"  name="score">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid score must be in number</label>
                 </div>
@@ -528,70 +536,70 @@
                   <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Manufacturer</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control"  id="manufacturer" name="manufacturer">
+                    <input type="text" class="textbox"  id="manufacturer" name="manufacturer">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">Name of manufacturer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Website Brand</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="website" name="website">
+                    <input type="text" class="textbox" id="website" name="website">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid brand Website</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Bearing capacity</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="bearing" name="bearing">
+                    <input type="text" class="textbox" id="bearing" name="bearing">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">U-value</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="value" name="value">
+                    <input type="text" class="textbox" id="value" name="value">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid U-value of product</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Sound insulation</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="soundi" name="soundi">
+                    <input type="text" class="textbox" id="soundi" name="soundi">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Fire resistance</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="resistance" name="resistance">
+                    <input type="text" class="textbox" id="resistance" name="resistance">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Lenght-X max</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="length" name="length">
+                    <input type="text" class="textbox" id="length" name="length">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label">lenght in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Height-Y max</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="height" name="height">
+                    <input type="text" class="textbox" id="height" name="height">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Height in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Weight-Z max</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="weight" name="weight">
+                    <input type="text" class="textbox" id="weight" name="weight">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Weigth in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Construction method</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="method" name="method">
+                    <select class="textbox" aria-label="Default select example" id="method" name="method">
                       <option selected>Select method</option>
                       <option value="Assembly">Assembly</option>
                       <option value="Skeleton">Skeleton</option>
@@ -603,7 +611,7 @@
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Building System</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="system" name="system">
+                    <select class="textbox" aria-label="Default select example" id="system" name="system">
                       <option selected>Select Sytem</option>
                       <option value="OBase building and fit-outne">OBase building and fit-outne</option>
                       <option value="Load-bearing exterior walls">Load-bearing exterior walls</option>
@@ -614,7 +622,7 @@
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Construction type</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="ctype" name="ctype">
+                    <select class="textbox" aria-label="Default select example" id="ctype" name="ctype">
                       <option selected>Open this select menu</option>
                       <option value="Timber">Timber</option>
                       <option value="CLT">CLT</option>
@@ -629,7 +637,7 @@
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Interior finish/exterior cladding</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="ifinish" name="ifinish">
+                    <select class="textbox" aria-label="Default select example" id="ifinish" name="ifinish">
                       <option selected>Open this select menu</option>
                       <option value="Aluminium">Aluminium</option>
                       <option value="Concrete">Concrete</option>
@@ -643,7 +651,7 @@
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Color</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="color" name="color">
+                    <select class="textbox" aria-label="Default select example" id="color" name="color">
                       <option selected>Open this select menu</option>
                       <option value="White">White</option>
                       <option value="Yellow">Yellow</option>
@@ -663,32 +671,32 @@
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Designed by</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="designed" name="designed">
+                    <input type="text" class="textbox" id="designed" name="designed">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Name of designer </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">All possible configuration</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="configuration" name="configuration">
+                    <input type="text" class="textbox" id="configuration" name="configuration">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> valid configuration </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Specification text</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control"  id="specification" name="specification">
+                    <input type="text" class="textbox"  id="specification" name="specification">
                   </div>
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Some descriptive text </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">3D object</label>
                   <div class="col-sm-6">
-                    <input class="form-control" type="file" id="object" name="object">
+                    <input class="textbox" type="file" id="object" name="object">
                   </div>
                 </div>  
                 <div class="row mb-0">
-                  <div class="col-sm-10" align="right">
+                  <div class="col-sm-12" align="right">
                     <button type="submit"  class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>

@@ -14,7 +14,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #f6f9ff;
+  background: white;
   color: #444444;
 }
 
@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-  color: #717ff5;
+  color: #fbfbff;
   text-decoration: none;
 }
 
@@ -42,7 +42,7 @@ h6 {
 --------------------------------------------------------------*/
 #main {
   margin-top: 60px;
-  padding: 20px 30px;
+  padding: 25px 10px;
   transition: all 0.3s;
 }
 
@@ -63,7 +63,7 @@ h6 {
   font-size: 24px;
   margin-bottom: 0;
   font-weight: 600;
-  color: #012970;
+  color: #01060f;
 }
 
 /*--------------------------------------------------------------
@@ -237,14 +237,14 @@ h6 {
   margin-bottom: 30px;
   border: none;
   border-radius: 5px;
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  box-shadow: 0px 0 30px rgba(250, 251, 252, 0.1);
 }
 
 .card-header,
 .card-footer {
   border-color: #ebeef4;
   background-color: #fff;
-  color: #798eb3;
+  color: #f1f4f8;
   padding: 15px;
 }
 
@@ -252,18 +252,18 @@ h6 {
   padding: 20px 0 15px 0;
   font-size: 18px;
   font-weight: 500;
-  color: #012970;
+  color: #080808;
   font-family: "Poppins", sans-serif;
 }
 
 .card-title span {
-  color: #899bbd;
+  color: #0a0a0a;
   font-size: 14px;
   font-weight: 400;
 }
 
 .card-body {
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 20px 60px;
 }
 
 .card-img-overlay {
@@ -323,21 +323,21 @@ h6 {
 .breadcrumb {
   font-size: 14px;
   font-family: "Nunito", sans-serif;
-  color: #899bbd;
+  color: #111111;
   font-weight: 600;
 }
 
 .breadcrumb a {
-  color: #899bbd;
+  color: #0c0c0c;
   transition: 0.3s;
 }
 
 .breadcrumb a:hover {
-  color: #51678f;
+  color: #0a0a0a;
 }
 
 .breadcrumb .breadcrumb-item::before {
-  color: #899bbd;
+  color: #080808;
 }
 
 .breadcrumb .active {
@@ -396,7 +396,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   height: 60px;
-  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  box-shadow: 0px 2px 20px rgba(253, 254, 255, 0.925);
   background-color: #fff;
   padding-left: 20px;
   /* Toggle Sidebar Button */
@@ -658,7 +658,7 @@ h6 {
 
   #main,
   #footer {
-    margin-left: 300px;
+    margin-left: 220px;
   }
 }
 
@@ -814,7 +814,7 @@ h6 {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #aab7cf;
+  color: #fdfdfd;
   margin-bottom: 0;
   padding: 0;
 }

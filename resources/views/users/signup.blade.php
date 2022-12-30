@@ -48,8 +48,15 @@
   height:100%;
 
   }
-  
+
   </style>
+  <style>
+    .textbox{
+      width:525px;
+      height:39px; 
+    }
+    </style>
+
 <body>
 
   <!-- ======= Header ======= -->
@@ -159,7 +166,7 @@
 
     <section class="section">
     <div class="row mb-0">
-                  <div class="col-sm-10" align="right">
+                  <div class="col-sm-12" align="right">
                     <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>
@@ -173,9 +180,9 @@
                 <div class="row mb-0">
                   <label for="name" class="col-sm-2 col-form-label">User Name</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="name">
+                    <input type="text" class="textbox" name="name">
                   </div>
-                  <label for="name" class="col-sm-4 col-form-label">Brand,Company or Last name of user</label>
+                  <label for="name" class="col-md-4 col-form-label">Brand,Company or Last name of user</label>
                 </div>
                  <label>User Type* :</label>
                     <div class="form-check">
@@ -224,75 +231,75 @@
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="email">
+                    <input type="text" class="textbox" name="email">
                   </div>
-                  <label for="inputEmail" class="col-sm-4 col-form-label">Valid email address</label>
+                  <label for="inputEmail" class="col-md-4 col-form-label">Valid email address</label>
                 </div>
                 <div class="row mb-0">
                   <label for="password" class="col-sm-2 col-form-label">Password</label>
                   <div class="col-sm-6">
-                    <input type="password" class="form-control" name="password">
+                    <input type="password" class="textbox" name="password">
                   </div>
-                  <label for="password" class="col-sm-4 col-form-label">Mini 8 char 2 letter 2 number 1 capital</label>
+                  <label for="password" class="col-md-4 col-form-label">Mini 8 char 2 letter 2 number 1 capital</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Phone number</label>
                   <div class="col-sm-6">
-                    <input type="number" class="form-control" name="phone_number">
+                    <input type="number" class="textbox" name="phone_number">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Telephone or mobile number </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Telephone or mobile number </label>
                 </div>
                 <div class="row mb-0">
                   <label for="country" class="col-sm-2 col-form-label">Country</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="country">
+                    <input type="text" class="textbox" name="country">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Country of location </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Country of location </label>
                 </div>
                 <div class="row mb-0">
                   <label for="VAT_number" class="col-sm-2 col-form-label">VAT_Number</label>
                   <div class="col-sm-6">
-                    <input type="number" class="form-control" name="VAT_number">
+                    <input type="number" class="textbox" name="VAT_number">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">VAT/Chamber of Commerce/registration</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">VAT/Chamber of Commerce/registration</label>
                  </div>
                  <div class="row mb-0">
                   <label for="company_name" class="col-sm-2 col-form-label">Company Name</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="company_name">
+                    <input type="text" class="textbox" name="company_name">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Name of comapny or organization </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Name of comapny or organization </label>
                  </div>
                 <div class="row mb-0">
                   <label for="zip_code" class="col-sm-2 col-form-label">Zip Code</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="zip_code">
+                    <input type="text" class="textbox" name="zip_code">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Code according to sorting centers post </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Code according to sorting centers post </label>
                 </div>
                 <div class="row mb-0">
                   <label for="city" class="col-sm-2 col-form-label">City</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="city">
+                    <input type="text" class="textbox" name="city">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">City or Region</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">City or Region</label>
                </div>
                   <div class="row mb-0">
                   <label for="street_name" class="col-sm-2 col-form-label">Street Name</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="street_name">
+                    <input type="text" class="textbox" name="street_name">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Name of the street </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Name of the street </label>
                 </div>
                 <div class="row mb-0">
                   <label for="street_number" class="col-sm-2 col-form-label">Street Number</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="street_number">
+                    <input type="text" class="textbox" name="street_number">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label"> House number or number within the industrial zone </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label"> House number or number within the industrial zone </label>
                 </div>
                 <div class="row mb-0">
-                  <div class="col-sm-10" align="right">
+                  <div class="col-sm-12" align="right">
                     <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>
