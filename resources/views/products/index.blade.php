@@ -48,10 +48,11 @@
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 125px;
   margin: auto;
   text-align: center;
   font-family: arial;
+  height:100px;
 }
 
 .title {
@@ -295,10 +296,26 @@ body {
 </div>
       </nav>
 
+
             <!-- Sales Card -->
         <form>
+
+          <div class="row">
         @foreach ($products as $product)
-        <div class="col-xxl-0 col-md-2">
+        <div style="width:20%" , >
+          <div class="card" >
+            <div>
+            <a href="{{ route('products.show',$product->id) }}"><img src="assets/img/icon product data.png" width="70px" height="70px"></a>
+            </div>
+          </div>
+          <h6>Name:{{ $product -> pname }}</h6>
+          <h6>Type:{{ $product -> type }}</h6>
+          </div>
+          @endforeach
+        </div>
+
+        <!-- @foreach ($products as $product)
+        <div class=" ">
        
            <div class="card info-card sales-card">
            <div> 
@@ -311,14 +328,12 @@ body {
                </div>
              </div>
            </div>
-         </div><!-- End Files Card -->
-
-        <!-- Right side columns -->
+         </div>
          <h6>Name:{{ $product -> pname }}</h6>
          <h6>Type:{{ $product -> type }}</h6>
       </br>
           
-   @endforeach
+   @endforeach -->
 </form>
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->

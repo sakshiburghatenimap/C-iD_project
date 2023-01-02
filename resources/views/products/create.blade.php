@@ -186,7 +186,7 @@
               <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
               @csrf
                 <div class="row mb-0">
-                  <label for="inputText" class="col-md-2 col-form-label">Product Name</label>
+                  <label for="inputText" class="col-sm-2 col-form-label">Product Name</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="pname" name="pname">
                   </div>
@@ -304,42 +304,42 @@
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="description" name="description">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Must Contain 30 characters</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Must Contain 30 characters</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputDate" class="col-sm-2 col-form-label">Model year</label>
                   <div class="col-sm-6">
                     <input type="date" class="textbox" id="year" name="year">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Enter in the valid format </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Enter in the valid format </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Product code</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="code" name="code">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Valid code 3 digit</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Valid code 3 digit</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Selling price</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="sprice" name="sprice">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Valid price must contain numbers</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Valid price must contain numbers</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Calculation price</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="cprice" name="cprice">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Valid price must contain numbers</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Valid price must contain numbers</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Maintainance Frequency</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="frequency" name="frequency">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Frequency of maintainance</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Frequency of maintainance</label>
                  </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Maintenance Sheet</label>
@@ -374,7 +374,7 @@
                   <label for="inputNumber" class="col-sm-4 col-form-label">valid score must be in number</label>
                 </div>
                 <fieldset class="row mb-0">
-                  <legend class="col-form-label col-sm-2 pt-0">Energy neutral</legend>
+                  <legend class="col-sm-2 col-form-label">Energy neutral</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="energyn" id="energyn" value="yes">
@@ -393,7 +393,7 @@
                 </fieldset>
                
                 <fieldset class="row mb-0">
-                  <legend class="col-form-label col-sm-2 pt-0">Returnable</legend>
+                  <legend class="col-sm-2 col-form-label">Returnable</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="returnable" id="returnable" value="yes">
@@ -411,7 +411,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
-                  <legend class="col-form-label col-sm-2 pt-0">Movable</legend>
+                  <legend class="col-sm-2 col-form-label">Movable</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="movable" id="movable" value="yes">
@@ -429,7 +429,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
-                  <legend class="col-form-label col-sm-2 pt-0">Compatible</legend>
+                  <legend class="col-sm-2 col-form-label">Compatible</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="compatible" id="compatible" value="yes">
@@ -446,7 +446,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
-                  <legend class="col-form-label col-sm-2 pt-0">Demountable</legend>
+                  <legend class="col-sm-2 col-form-label">Demountable</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="demountable" id="demountable" value="yes">
@@ -464,7 +464,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
-                  <legend class="col-form-label col-sm-2 pt-0">Pace-Layering</legend>
+                  <legend class="col-sm-2 col-form-label">Pace-Layering</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="pacel" id="pacel" value="yes">
@@ -482,7 +482,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
-                  <legend class="col-form-label col-sm-2 pt-0">Recycle Content</legend>
+                  <legend class="col-sm-2 col-form-label">Recycle Content</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="recycled" id="recycled" value="yes">
@@ -500,7 +500,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
-                  <legend class="col-form-label col-sm-2 pt-0">BioBased</legend>
+                  <legend class="col-sm-2 col-form-label">BioBased</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="biobased" id="biobased" value="yes">
@@ -518,7 +518,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
-                  <legend class="col-form-label col-sm-2 pt-0">Extendable life</legend>
+                  <legend class="col-sm-2 col-form-label">Extendable life</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="extendable" id="extendable" value="yes">
@@ -535,66 +535,66 @@
                   </div>
                   <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Manufacturer</label>
-                  <div class="col-sm-6">
+                  <div class="col-sm-7">
                     <input type="text" class="textbox"  id="manufacturer" name="manufacturer">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Name of manufacturer</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Name of manufacturer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Website Brand</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="website" name="website">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">valid brand Website</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">valid brand Website</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Bearing capacity</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="bearing" name="bearing">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">U-value</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="value" name="value">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">valid U-value of product</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">valid U-value of product</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Sound insulation</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="soundi" name="soundi">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Fire resistance</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="resistance" name="resistance">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">valid answer</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">valid answer</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Lenght-X max</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="length" name="length">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">lenght in mm</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">lenght in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Height-Y max</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="height" name="height">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label"> Height in mm</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label"> Height in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Weight-Z max</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="weight" name="weight">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label"> Weigth in mm</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label"> Weigth in mm</label>
                 </div>
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Construction method</label>
@@ -673,21 +673,21 @@
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="designed" name="designed">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label"> Name of designer </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label"> Name of designer </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">All possible configuration</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="configuration" name="configuration">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label"> valid configuration </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label"> valid configuration </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Specification text</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox"  id="specification" name="specification">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label"> Some descriptive text </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Some descriptive text </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">3D object</label>

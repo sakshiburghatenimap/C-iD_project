@@ -55,6 +55,15 @@
       height:39px; 
     }
     </style>
+
+    <style>
+    .form-checkR {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 0.9em;
+    margin-bottom: 0.125rem;
+    }
+</style>
 <body>
 
   <!-- ======= Header ======= -->
@@ -169,7 +178,7 @@
         <u><li><h4>{{ Auth::user()->name }}</h4></li></u>
       </ol>
     </nav>
-  </div><!-- 
+  </div>
     <section class="section">
     <div class="row mb-0">
                   <div class="col-sm-12" align="right">
@@ -191,44 +200,45 @@
                   </div>
                   <label for="name" class="col-sm-4 col-form-label">Brand,Company or Last name of user</label>
                 </div>
+                <div class="row mb-0">
                  <label>User Type* :</label>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="resident" value="resident">
                       <label class="form-check-label" for="resident">
                       Resident
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="owner" value="owner">
                       <label class="form-check-label" for="owner">
                        Owner
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="manufacturer" value="manufacturer">
                       <label class="form-check-label" for="manufacturer">
                       Manufacturer
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="architech" value="architech">
                       <label class="form-check-label" for="architech">
                       Architech
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="inspector" value="inspector">
                       <label class="form-check-label" for="inspector">
                       Installer/Inspector/Contractor
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="agent" value="agent">
                       <label class="form-check-label" for="agent">
                       Reseller/Agent
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="dismantler" value="dismantler">
                       <label class="form-check-label" for="dismantler">
                       Dismantler

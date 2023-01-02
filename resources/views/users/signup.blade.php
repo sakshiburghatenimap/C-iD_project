@@ -56,6 +56,14 @@
       height:39px; 
     }
     </style>
+     <style>
+    .form-checkR {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 0.9em;
+    margin-bottom: 0.125rem;
+    }
+</style>
 
 <body>
 
@@ -65,7 +73,7 @@
   <div class="d-flex align-items-center justify-content-between">
   <a href="index.html" class="logo d-flex align-items-center">
     <img src="assets/img/logo.png" alt="">
-    <span class="d-none d-lg-block">Create User Data  </span>
+   
   </a>
   
 </div><!-- End Logo -->
@@ -153,17 +161,15 @@
 
   <main id="main" class="main">
 
-    <div class="pagetitle">
-      
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">User Data</a></li>
-          <li>&nbsp > &nbsp Registration</li>
-         
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
-
+  <div class="pagetitle">
+    
+    <nav>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active"><h4><u>Registration</u> ></h4></li>
+        
+      </ol>
+    </nav>
+  </div>
     <section class="section">
     <div class="row mb-0">
                   <div class="col-sm-12" align="right">
@@ -173,7 +179,7 @@
       <div class="row">
         <div class="col-lg-12">
             <div class="card-body">
-             
+
               <!-- General Form Elements -->
               <form action="{{ route('register.custom') }}" method="POST">
                 @csrf
@@ -182,46 +188,44 @@
                   <div class="col-sm-6">
                     <input type="text" class="textbox" name="name">
                   </div>
-                  <label for="name" class="col-md-4 col-form-label">Brand,Company or Last name of user</label>
-                </div>
                  <label>User Type* :</label>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="resident" value="resident">
                       <label class="form-check-label" for="resident">
                       Resident
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="owner" value="owner">
                       <label class="form-check-label" for="owner">
                        Owner
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="manufacturer" value="manufacturer">
                       <label class="form-check-label" for="manufacturer">
                       Manufacturer
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="architech" value="architech">
                       <label class="form-check-label" for="architech">
                       Architech
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="inspector" value="inspector">
                       <label class="form-check-label" for="inspector">
                       Installer/Inspector/Contractor
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="agent" value="agent">
                       <label class="form-check-label" for="agent">
                       Reseller/Agent
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-checkR">
                       <input class="form-check-input" type="radio" name="user_role" id="dismantler" value="dismantler">
                       <label class="form-check-label" for="dismantler">
                       Dismantler
