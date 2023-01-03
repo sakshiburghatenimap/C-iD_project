@@ -51,7 +51,7 @@
   </style>
   <style>
     .textbox{
-      width:525px;
+      width:100%;
       height:39px; 
     }
     </style>
@@ -181,7 +181,7 @@
   </div>
     <section class="section">
     <div class="row mb-0">
-                  <div class="col-sm-12" align="right">
+                  <div class="col-sm-12" style="width:94%" align="right">
                     <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>
@@ -316,7 +316,7 @@
                   <label for="inputNumber" class="col-sm-4 col-form-label"> House number or number within the industrial zone </label>
                 </div>
                 <div class="row mb-0">
-                  <div class="col-sm-12" align="right">
+                  <div class="col-sm-12" style="width:94%" align="right">
                     <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>

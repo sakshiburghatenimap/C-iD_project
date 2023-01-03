@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Create product data</title>
+  <title>Edit product data</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -51,8 +51,8 @@
   </style>
   <style>
     .textbox{
-      width:525px;
-      height:39px; 
+      width:100%;
+      height:39px;
     }
     </style>
 
@@ -175,7 +175,7 @@
 
     <section class="section">
          <div class="row mb-0">
-                  <div class="col-sm-12" align="right">
+                  <div class="col-sm-12" style="width:94%" align="right">
                     <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>
@@ -192,13 +192,14 @@
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="pname" name="pname" value="{{$product->pname}}">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Must Contain min 5 char</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Must Contain min 5 char</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Brand</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="brand" name="brand"  value="{{$product->brand}}">
                   </div>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Enter the brand name</label>
                 </div>
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Category</label>
@@ -305,20 +306,21 @@
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="description" name="description"  value="{{$product->description}}">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Must Contain 30 char</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Must Contain 30 char</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputDate" class="col-sm-2 col-form-label">Model year</label>
                   <div class="col-sm-6">
                     <input type="date" class="textbox" id="year" name="year"  value="{{$product->year}}">
                   </div>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Enter the valid year</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Product code</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="code" name="code"  value="{{$product->code}}">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Valid code 3 digit</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Valid code 3 digit</label>
                 </div>
               
                 <div class="row mb-0">
@@ -326,21 +328,21 @@
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="sprice" name="sprice"  value="{{$product->sprice}}">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Valid price must contain numbers</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Valid price must contain numbers</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Calculation price</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="cprice" name="cprice"  value="{{$product->cprice}}">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Valid price must contain numbers</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Valid price must contain numbers</label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Maintainance Frequency</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="frequency" name="frequency"  value="{{$product->frequency}}">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Frequency of maintainance</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Frequency of maintainance</label>
                  </div>
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Maintenance Sheet</label>
@@ -365,14 +367,14 @@
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="span" name="span"  value="{{$product->span}}">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">Life cycle </label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">Life cycle </label>
                 </div>
                 <div class="row mb-0">
                   <label for="inputText" class="col-sm-2 col-form-label">Environmental score</label>
                   <div class="col-sm-6">
                     <input type="text" class="textbox" id="score"  name="score"  value="{{$product->score}}">
                   </div>
-                  <label for="inputNumber" class="col-sm-4 col-form-label">valid score must be in number</label>
+                  <label for="inputNumber" class="col-md-4 col-form-label">valid score must be in number</label>
                 </div>
                 <fieldset class="row mb-0">
                   <legend class="col-form-label col-sm-2 pt-0">Energy neutral</legend>
@@ -600,7 +602,7 @@
                 <div class="row mb-0">
                   <label class="col-sm-2 col-form-label">Construction method</label>
                   <div class="col-sm-6">
-                    <select class="form-select" aria-label="Default select example" id="method" name="method">
+                    <select class="textbox" aria-label="Default select example" id="method" name="method">
                       <option selected>Select method</option>
                       <option value="Assembly">Assembly</option>
                       <option value="Skeleton">Skeleton</option>
@@ -691,13 +693,13 @@
                   <label for="inputNumber" class="col-sm-4 col-form-label"> Some descriptive text </label>
                 </div>
                 <div class="row mb-0">
-                  <label for="inputNumber" class="col-md-4 col-form-label">3D object</label>
+                  <label for="inputNumber" class="col-sm-2 col-form-label">3D object</label>
                   <div class="col-sm-6">
                     <input class="textbox" type="file" id="object" name="object"  value="{{$product->object}}">
                   </div>
                 </div>  
                 <div class="row mb-0">
-                  <div class="col-sm-12" align="right">
+                  <div class="col-sm-12" style="width:94%" align="right">
                     <button type="submit"  class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>

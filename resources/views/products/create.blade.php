@@ -50,7 +50,7 @@
 
   <style>
     .textbox{
-      width:525px;
+      width:100%;
       height:39px; 
     }
     </style>
@@ -174,7 +174,7 @@
 
     <section class="section">
          <div class="row mb-0">
-                  <div class="col-sm-12" align="right">
+                  <div class="col-sm-12" style="width:94%" align="right">
                     <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>
@@ -535,7 +535,7 @@
                   </div>
                   <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Manufacturer</label>
-                  <div class="col-sm-7">
+                  <div class="col-sm-6">
                     <input type="text" class="textbox"  id="manufacturer" name="manufacturer">
                   </div>
                   <label for="inputNumber" class="col-md-4 col-form-label">Name of manufacturer</label>
@@ -696,7 +696,7 @@
                   </div>
                 </div>  
                 <div class="row mb-0">
-                  <div class="col-sm-12" align="right">
+                  <div class="col-sm-12" style="width:94%" align="right">
                     <button type="submit"  class="btn btn-outline-primary"><i class="fa fa-check"></i>Save</button>
                   </div>
                 </div>

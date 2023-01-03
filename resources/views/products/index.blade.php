@@ -240,7 +240,7 @@ body {
         </li><!-- End Search Icon-->
           </ul><!-- End Messages Dropdown Items -->
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-          <span>{{ Auth::user()->name }}</span>|<span>{{ Auth::user()->user_role }}</span> 
+          <span> {{ Auth::user()->name }}</span>|<span>{{ Auth::user()->user_role }}</span>
             <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle"> 
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </a><!-- End Profile Iamge Icon -->
@@ -302,38 +302,19 @@ body {
 
           <div class="row">
         @foreach ($products as $product)
-        <div style="width:20%" , >
-          <div class="card" >
+        <div style="width:20%",>
+          <div class="card">
             <div>
             <a href="{{ route('products.show',$product->id) }}"><img src="assets/img/icon product data.png" width="70px" height="70px"></a>
             </div>
           </div>
-          <h6>Name:{{ $product -> pname }}</h6>
-          <h6>Type:{{ $product -> type }}</h6>
+          <h6 style="padding-left:38px",>Name:{{ $product -> pname }}</h6>
+           <h6 style="padding-left:38px",>Type:{{ $product -> type }}</h6>
           </div>
           @endforeach
         </div>
 
-        <!-- @foreach ($products as $product)
-        <div class=" ">
        
-           <div class="card info-card sales-card">
-           <div> 
-           <a href="{{ route('products.show',$product->id) }}"><img src="assets/img/icon product data.png" width="70px" height="70px"></a>
-           </div>
-             <div class="card-body">
-               <div class="d-flex align-items-center">
-                 <div class="ps-1" align="left">
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-         <h6>Name:{{ $product -> pname }}</h6>
-         <h6>Type:{{ $product -> type }}</h6>
-      </br>
-          
-   @endforeach -->
 </form>
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->

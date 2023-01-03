@@ -193,8 +193,8 @@ p.ex2 {
 <style>
   .block {
     border: 1px thin black;
-    height:100px;
-    width: 450px;
+    height:150px;
+    width: 500px;
     outline-style: solid;
     outline-color: black;
     outline-width: thin;
@@ -298,7 +298,7 @@ p.ex2 {
         </li><!-- End Notification Nav -->
         <li class="nav-item dropdown pe-3">
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <span>{{ Auth::user()->name }}</span>|<span>{{ Auth::user()->user_role }}</span>
+          <span> {{ Auth::user()->name }}</span>|<span>{{ Auth::user()->user_role }}</span>
             <img src="{{ asset('assets/img/icon user.png') }}" alt="Profile" class="rounded-circle">
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </a><!-- End Profile Iamge Icon -->
@@ -376,8 +376,18 @@ p.ex2 {
          <h6 class="block">&nbsp<i class="fa fa-leaf"></i><b>&nbspSustainability values</b>
          </br>
          </br>Expected life span:{{$product->span}}</br>
-         </br>Environmental score:{{$product->score}}
-          </br></h6>
+         </br>Environmental score:{{$product->score}}</br>
+         <img src="{{ asset('assets/img/icon sustainabillity values.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon share.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon geolocation.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon sustainabillity values.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon share.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon geolocation.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon sustainabillity values.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon share.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon geolocation.png') }}" width="50px" height="50px">
+          </br>
+          </h6>
          </div>
         <p class="ex1"><i class="fa fa-clipboard"></i>&nbspMaintainance sheet:</br>{{$product->msheet}}</p><br>
         <div class="col-lg-5">
