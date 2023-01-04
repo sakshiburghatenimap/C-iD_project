@@ -159,6 +159,7 @@ body {
   }
 }
 </style>
+
   <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar" background image="assets/img/C-iD platform background green.jpg">
   

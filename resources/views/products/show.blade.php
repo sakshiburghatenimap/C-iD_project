@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+
   <title>Product Details page</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -205,12 +206,13 @@ p.ex2 {
   .box {
     border: 2px thin black;
     height:400px;
-    width:450px;
+    width:500px;
     outline-style: solid;
     outline-color: black;
     outline-width: thin;
   }
 </style>
+
 <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar" background image="{{ asset('assets/img/C-iD platform background green.jpg') }}">
   
@@ -377,20 +379,20 @@ p.ex2 {
          </br>
          </br>Expected life span:{{$product->span}}</br>
          </br>Environmental score:{{$product->score}}</br>
-         <img src="{{ asset('assets/img/icon sustainabillity values.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon share.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon geolocation.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon sustainabillity values.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon share.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon geolocation.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon sustainabillity values.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon share.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon geolocation.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Energysaving.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Returnable.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Movable.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Compatible.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Demountable.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Pace-layering.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Recycledcontent.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Bio-based.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Extendablelife.png') }}" width="50px" height="50px">
           </br>
           </h6>
          </div>
         <p class="ex1"><i class="fa fa-clipboard"></i>&nbspMaintainance sheet:</br>{{$product->msheet}}</p><br>
-        <div class="col-lg-5">
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<div class="col-lg-7">
           <h6 class="box">&nbsp<i class="fa fa-list"></i><b>&nbspSpecifications</b></br>
            <br>Manufacturer:{{$product->manufacturer}}
             <br>Website Brand:{{$product->website}}

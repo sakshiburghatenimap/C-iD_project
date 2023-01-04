@@ -162,6 +162,29 @@ body {
   }
 }
 </style>
+<style>
+      @media only screen and (max-width:1600px) {
+  /* For desktop: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+  .textbox{
+      width:75%;
+      height:39px; 
+    }
+    .body{
+      width: 100%;
+      padding-left:25%;
+      padding-right:25%;
+    }
+}
+
+
+      </style>
   <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar" background image="{{ ('assets/img/C-iD platform background green.jpg') }}">
   
