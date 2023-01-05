@@ -47,30 +47,13 @@
   height:100%;
   }
   </style>
-
-    <style>
-      @media only screen and (max-width:1600px) {
-  /* For desktop: */
-  .main {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
+<style>
   .textbox{
-      width:75%;
+      width:100%;
       height:39px; 
     }
-    .body{
-      width: 100%;
-      padding-left:25%;
-      padding-right:25%;
-    }
-}
-
-
-      </style>
+  </style>
+   
 
 <body>
 
@@ -117,7 +100,98 @@
               </a>
             </li>
     </nav><!-- End Icons Navigation -->
-
+<script>
+  function img(x)
+  {
+    if(x==0)
+    document.getElementById('myimg').style.display='block';
+    else
+    document.getElementById('myimg').style.display='none';
+    return;
+  }
+  </script>
+  <script>
+  function imgR(a)
+  {
+    if(a==0)
+    document.getElementById('myimgr').style.display='block';
+    else
+    document.getElementById('myimgr').style.display='none';
+    return;
+  }
+  </script>
+  <script>
+  function imgM(b)
+  {
+    if(b==0)
+    document.getElementById('myimgm').style.display='block';
+    else
+    document.getElementById('myimgm').style.display='none';
+    return;
+  }
+  </script>
+  <script>
+  function imgC(c)
+  {
+    if(c==0)
+    document.getElementById('myimgc').style.display='block';
+    else
+    document.getElementById('myimgc').style.display='none';
+    return;
+  }
+  </script>
+  <script>
+  function imgD(d)
+  {
+    if(d==0)
+    document.getElementById('myimgd').style.display='block';
+    else
+    document.getElementById('myimgd').style.display='none';
+    return;
+  }
+  </script>
+  <script>
+  function imgP(p)
+  {
+    if(p==0)
+    document.getElementById('myimgp').style.display='block';
+    else
+    document.getElementById('myimgp').style.display='none';
+    return;
+  }
+  </script>
+  <script>
+  function imgRy(r)
+  {
+    if(r==0)
+    document.getElementById('myimgry').style.display='block';
+    else
+    document.getElementById('myimgry').style.display='none';
+    return;
+  }
+  </script>
+  
+  <script>
+  function imgB(i)
+  {
+    if(i==0)
+    document.getElementById('myimgbi').style.display='block';
+    else
+    document.getElementById('myimgbi').style.display='none';
+    return;
+  }
+  </script>
+  <script>
+  function imgX(q)
+  {
+    if(q==0)
+    document.getElementById('myimgq').style.display='block';
+    else
+    document.getElementById('myimgq').style.display='none';
+    return;
+  }
+  </script>
+  
   </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
@@ -394,18 +468,18 @@
                   <legend class="col-sm-2 col-form-label">Energy neutral</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="energyn" id="energyn" value="yes">
+                      <input class="form-check-input" type="radio" name="energyn" onclick="img(0)" id="energyn" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="energyn" id="energyn" value="no">
+                      <input class="form-check-input" type="radio" name="energyn" onclick="img(1)" id="energyn" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
                     </div>
-                    
+                    <img src="{{ asset('assets/img/icon-Energysaving.png') }}" id="myimg" width="50px" height="50px">
                   </div>
                 </fieldset>
                
@@ -413,142 +487,144 @@
                   <legend class="col-sm-2 col-form-label">Returnable</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="returnable" id="returnable" value="yes">
+                      <input class="form-check-input" type="radio" name="returnable" onclick="imgR(0)" id="returnable" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="returnable" id="returnable" value="no">
+                      <input class="form-check-input" type="radio" name="returnable" onclick="imgR(1)" id="returnable" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
                     </div>
-                    
+                    <img src="{{ asset('assets/img/icon-Returnable.png') }}" id="myimgr" width="50px" height="50px">
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
                   <legend class="col-sm-2 col-form-label">Movable</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="movable" id="movable" value="yes">
+                      <input class="form-check-input" type="radio" name="movable" onclick="imgM(0)" id="movable" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="movable" id="movable" value="no">
+                      <input class="form-check-input" type="radio" name="movable" onclick="imgM(1)" id="movable" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
                     </div>
-                    
+                    <img src="{{ asset('assets/img/icon-Movable.png') }}" id="myimgm" width="50px" height="50px">
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
                   <legend class="col-sm-2 col-form-label">Compatible</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="compatible" id="compatible" value="yes">
+                      <input class="form-check-input" type="radio" name="compatible"  onclick="imgC(0)" id="compatible" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="compatible" id="compatible" value="no">
+                      <input class="form-check-input" type="radio" name="compatible" onclick="imgC(1)" id="compatible" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
                     </div>
+                    <img src="{{ asset('assets/img/icon-Compatible.png') }}" id="myimgc" width="50px" height="50px">
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
                   <legend class="col-sm-2 col-form-label">Demountable</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="demountable" id="demountable" value="yes">
+                      <input class="form-check-input" type="radio" name="demountable" onclick="imgD(0)" id="demountable" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="demountable" id="demountable" value="no">
+                      <input class="form-check-input" type="radio" name="demountable"  onclick="imgD(1)" id="demountable" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
                     </div>
-                    
+                    <img src="{{ asset('assets/img/icon-Demountable.png') }}" id="myimgd" width="50px" height="50px">
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
                   <legend class="col-sm-2 col-form-label">Pace-Layering</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="pacel" id="pacel" value="yes">
+                      <input class="form-check-input" type="radio" name="pacel" onclick="imgP(0)" id="pacel" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="pacel" id="pacel" value="no">
+                      <input class="form-check-input" type="radio" name="pacel" onclick="imgP(1)" id="pacel" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
                     </div>
-                    
+                    <img src="{{ asset('assets/img/icon-Pace-layering.png') }}" id="myimgp" width="50px" height="50px">
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
                   <legend class="col-sm-2 col-form-label">Recycle Content</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="recycled" id="recycled" value="yes">
+                      <input class="form-check-input" type="radio" name="recycled" onclick="imgRy(0)" id="recycled" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="recycled" id="recycled" value="no">
+                      <input class="form-check-input" type="radio" name="recycled" onclick="imgRy(1)" id="recycled" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
                     </div>
-                    
+                    <img src="{{ asset('assets/img/icon-Recycledcontent.png') }}"  id="myimgry" width="50px" height="50px">
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
                   <legend class="col-sm-2 col-form-label">BioBased</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="biobased" id="biobased" value="yes">
+                      <input class="form-check-input" type="radio" name="biobased" onclick="imgB(0)" id="biobased" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="biobased" id="biobased" value="no">
+                      <input class="form-check-input" type="radio" name="biobased" onclick="imgB(1)" id="biobased" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
                     </div>
-                    
+                    <img src="{{ asset('assets/img/icon-Bio-based.png') }}" id="myimgbi" width="50px" height="50px">
                   </div>
                 </fieldset>
                 <fieldset class="row mb-0">
                   <legend class="col-sm-2 col-form-label">Extendable life</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="extendable" id="extendable" value="yes">
+                      <input class="form-check-input" type="radio" name="extendable" onclick="imgX(0)" id="extendable" value="yes">
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="extendable" id="extendable" value="no">
+                      <input class="form-check-input" type="radio" name="extendable" onclick="imgX(1)" id="extendable" value="no">
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
                     </div>
+                    <img src="{{ asset('assets/img/icon-Extendablelife.png') }}" id="myimgq" width="50px" height="50px">
                   </div>
                   <div class="row mb-0">
                   <label for="inputEmail" class="col-sm-2 col-form-label">Manufacturer</label>

@@ -49,29 +49,12 @@
 
   }
   </style>
- <style>
-      @media only screen and (max-width:1600px) {
-  /* For desktop: */
-  .main {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
-  .textbox{
-      width:75%;
+  <style>
+     .textbox{
+      width:100%;
       height:39px; 
     }
-    .body{
-      width: 100%;
-      padding-left:25%;
-      padding-right:25%;
-    }
-}
-
-
-      </style>
+    </style>
 
 <body>
 
@@ -397,13 +380,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Energy neutral</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="energyn" id="energyn" value="yes">
+                      <input class="form-check-input" type="radio" name="energyn" id="energyn" value="yes" {{ $product->energyn == "yes" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="energyn" id="energyn" value="no">
+                      <input class="form-check-input" type="radio" name="energyn" id="energyn" value="no"  {{ $product->energyn == "no" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -416,13 +399,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Returnable</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="returnable" id="returnable" value="yes">
+                      <input class="form-check-input" type="radio" name="returnable" id="returnable" value="yes" {{ $product->returnable == "yes" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="returnable" id="returnable" value="no">
+                      <input class="form-check-input" type="radio" name="returnable" id="returnable" value="no" {{ $product->returnable == "no" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -434,13 +417,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Movable</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="movable" id="movable" value="yes">
+                      <input class="form-check-input" type="radio" name="movable" id="movable" value="yes" {{ $product->movable == "yes" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="movable" id="movable" value="no">
+                      <input class="form-check-input" type="radio" name="movable" id="movable" value="no" {{ $product->movable == "no" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -452,13 +435,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Compatible</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="compatible" id="compatible" value="yes">
+                      <input class="form-check-input" type="radio" name="compatible" id="compatible" value="yes" {{ $product->compatible == "yes" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="compatible" id="compatible" value="no">
+                      <input class="form-check-input" type="radio" name="compatible" id="compatible" value="no" {{ $product->compatible == "no" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -469,13 +452,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Demountable</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="demountable" id="demountable" value="yes">
+                      <input class="form-check-input" type="radio" name="demountable" id="demountable" value="yes" {{ $product->demountable == "yes" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="demountable" id="demountable" value="no">
+                      <input class="form-check-input" type="radio" name="demountable" id="demountable" value="no" {{ $product->demountable == "no" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -487,13 +470,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Pace-Layering</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="pacel" id="pacel" value="yes">
+                      <input class="form-check-input" type="radio" name="pacel" id="pacel" value="yes" {{ $product->pacel == "yes" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="pacel" id="pacel" value="no">
+                      <input class="form-check-input" type="radio" name="pacel" id="pacel" value="no" {{ $product->pacel == "no" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -505,13 +488,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Recycle Content</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="recycled" id="recycled" value="yes">
+                      <input class="form-check-input" type="radio" name="recycled" id="recycled" value="yes" {{ $product->recycled == "yes" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="recycled" id="recycled" value="no">
+                      <input class="form-check-input" type="radio" name="recycled" id="recycled" value="no" {{ $product->recycled == "no" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -523,13 +506,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">BioBased</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="biobased" id="biobased" value="yes">
+                      <input class="form-check-input" type="radio" name="biobased" id="biobased" value="yes" {{ $product->biobased == "yes" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="biobased" id="biobased" value="no">
+                      <input class="form-check-input" type="radio" name="biobased" id="biobased" value="no" {{ $product->biobased == "no" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
@@ -541,13 +524,13 @@
                   <legend class="col-form-label col-sm-2 pt-0">Extendable life</legend>
                   <div class="col-sm-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="extendable" id="extendable" value="yes">
+                      <input class="form-check-input" type="radio" name="extendable" id="extendable" value="yes" {{ $product->extendable == "yes" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios1">
                      yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="extendable" id="extendable" value="no">
+                      <input class="form-check-input" type="radio" name="extendable" id="extendable" value="no" {{ $product->extendable == "no" ? 'checked' : '' }}>
                       <label class="form-check-label" for="gridRadios2">
                        No
                       </label>
