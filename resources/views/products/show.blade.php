@@ -212,7 +212,38 @@ p.ex2 {
     outline-width: thin;
   }
 </style>
+<style>
+* {
+  box-sizing: border-box;
+}
 
+.columnI {
+  float: left;
+  width: 20%;
+  padding: 8px;
+}
+
+/* Clearfix (clear floats) */
+.rowI::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<style>
+  .inner{
+  
+  }
+
+  .inner img{
+    transition: all 1.5s ease;
+  
+  }
+
+  .inner:hover img{
+    transform: scale(2.5);
+  }
+  </style>
 <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar" background image="{{ asset('assets/img/C-iD platform background green.jpg') }}">
   
@@ -348,14 +379,31 @@ p.ex2 {
 </br>
 </br>
         <!-- Left side columns -->
+        <div class="rowI">
+  <div class="columnI">
+    <div class="inner">
+    <img src="{{ asset('assets/img/building.jpg') }}"  style="width:55%">
+    </div>
+  </div>
+  <div class="columnI">
+  <div class="inner">
+    <img src="{{ asset('assets/img/window.jpg') }}"  style="width:55%">
+  </div>
+  </div>
+  <div class="columnI">
+  <div class="inner">
+    <img src="{{ asset('assets/img/door.jpg') }}"  style="width:55%">
+  </div>
+  </div>
+</div>
         <div class="col-lg-8">
           <div class="row">
             
             <!-- File Card -->
             <div class="col-md-5 col-lg-5 col-xl-5">
               <div class="card info-card sales-card">
-              <div align="left"> 
-                <img src="{{ asset('assets/img/icon my files.png') }}" width="200px" height="200px" align="center">
+              <div> 
+                <img src="{{ asset('assets/img/door.jpg') }}" width="200px" height="200px" align="center">
               </div>
             </div>
             </div><!-- End Files Card -->
@@ -379,15 +427,15 @@ p.ex2 {
          </br>
          </br>Expected life span:{{$product->span}}</br>
          </br>Environmental score:{{$product->score}}</br>
-         <img src="{{ asset('assets/img/icon-Energysaving.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon-Returnable.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon-Movable.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon-Compatible.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon-Demountable.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon-Pace-layering.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon-Recycledcontent.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon-Bio-based.png') }}" width="50px" height="50px">
-         <img src="{{ asset('assets/img/icon-Extendablelife.png') }}" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Energysaving.png') }}" id="myimg" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Returnable.png') }}" id="myimgr" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Movable.png') }}" id="myimgm" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Compatible.png') }}" id="myimgc" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Demountable.png') }}" id="myimgd" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Pace-layering.png') }}" id="myimgp" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Recycledcontent.png') }}"  id="myimgry" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Bio-based.png') }}" id="myimgbi" width="50px" height="50px">
+         <img src="{{ asset('assets/img/icon-Extendablelife.png') }}" id="myimgq" width="50px" height="50px">
           </br>
           </h6>
          </div>
