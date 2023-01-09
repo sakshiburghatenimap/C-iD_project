@@ -302,7 +302,7 @@ body {
     </div><!-- End Page Title -->
 </div>
       </nav>
-
+   
 
             <!-- Sales Card -->
         <form>
@@ -312,7 +312,7 @@ body {
         <div style="width:20%",>
           <div class="card">
             <div>
-            <a href="{{ route('products.show',$product->id) }}"><img src="{{ asset('assets/img/door.jpg') }}" width="70px" height="70px"></a>
+            <a href="{{ route('products.show',$product->id) }}"><img src="{{ asset('/image/product/'.$product->image)}}" width="70px" height="70px"></a>
             </div>
           </div>
           <h6 style="padding-left:38px",>Name:{{ $product -> pname }}</h6>
@@ -320,23 +320,21 @@ body {
           </div>
           @endforeach
         </div>
-
-       
 </form>
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/chart.js/chart.min.js"></script>
-  <script src="assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/chart.js/chart.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/echarts/echarts.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/quill/quill.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/simple-datatables/simple-datatables.js') }}"></script>
+  <script src="{{ asset('assets/vendor/tinymce/tinymce.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

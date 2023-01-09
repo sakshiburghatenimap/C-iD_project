@@ -387,7 +387,7 @@
                 <div class="row mb-0">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Product Image</label>
                   <div class="col-sm-6">
-                    <input class="textbox" type="file" id="image" name="image" multiple>
+                    <input class="textbox" type="file" id="image" name="image[]" multiple="">
                   </div>
                 </div>
                 <div class="row mb-0">
