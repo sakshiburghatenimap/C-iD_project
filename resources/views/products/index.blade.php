@@ -302,8 +302,7 @@ body {
     </div><!-- End Page Title -->
 </div>
       </nav>
-   
-
+  
             <!-- Sales Card -->
         <form>
 
@@ -312,7 +311,7 @@ body {
         <div style="width:20%",>
           <div class="card">
             <div>
-            <a href="{{ route('products.show',$product->id) }}"><img src="{{ asset('/image/product/'.$product->image)}}" width="70px" height="70px"></a>
+            <a href="{{ route('products.show',$product->id) }}"><img src="{{ asset('public/product/'.$product->image)}}" width="70px" height="70px"></a>
             </div>
           </div>
           <h6 style="padding-left:38px",>Name:{{ $product -> pname }}</h6>

@@ -41,7 +41,7 @@ class ProductController extends Controller
                'brand'=> $request->brand ,
                'category'=> $request-> category,
                 'type'=> $request->type, 
-                'image'=>implode('|',$last_img) ,
+                'image'=>$last_img ,
                 'description'=> $request->description,
                 'year'=> $request->year,
                 'sprice'=> $request->sprice,

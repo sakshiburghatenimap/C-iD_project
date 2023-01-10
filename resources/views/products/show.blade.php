@@ -244,6 +244,20 @@ p.ex2 {
     transform: scale(2.5);
   }
   </style>
+  <script type="text/javascript">
+     function swap(argument){
+      var img1 , img2 ,img3,img4;
+      img1=document.getElementById('img1').src;
+      img2=document.getElementById('img2').src;
+      img3=document.getElementById('img3').src;
+      img4=document.getElementById('img4').src;
+      document.getElementById('img2').src=img1;
+      document.getElementById('img1').src=img2;
+      document.getElementById('img3').src=img4;
+      document.getElementById('img4').src=img3;
+      
+     }
+    </script>
 <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar" background image="{{ asset('assets/img/C-iD platform background green.jpg') }}">
   
@@ -382,17 +396,17 @@ p.ex2 {
         <div class="rowI">
   <div class="columnI">
     <div class="inner">
-    <img src="{{ asset('assets/img/building.jpg') }}"  style="width:55%">
+    <img src="{{ asset('assets/img/building.jpg') }}" id="img1" onclick="swap()" style="width:55%">
     </div>
   </div>
   <div class="columnI">
   <div class="inner">
-    <img src="{{ asset('assets/img/window.jpg') }}"  style="width:55%">
+    <img src="{{ asset('assets/img/window.jpg') }}"  id="img4" onclick="swap()" style="width:55%">
   </div>
   </div>
   <div class="columnI">
   <div class="inner">
-    <img src="{{ asset('assets/img/door.jpg') }}"  style="width:55%">
+    <img src="{{ asset('assets/img/door.jpg') }}" id="img3" onclick="swap()"  style="width:55%">
   </div>
   </div>
 </div>
@@ -403,7 +417,7 @@ p.ex2 {
             <div class="col-md-5 col-lg-5 col-xl-5">
               <div class="card info-card sales-card">
               <div> 
-                <img src="{{ asset('assets/img/door.jpg') }}" width="200px" height="200px" align="center">
+                <img src="{{ asset('assets/img/door.jpg') }}" id="img2" onclick="swap()" width="200px" height="200px" align="center">
               </div>
             </div>
             </div><!-- End Files Card -->
@@ -455,7 +469,7 @@ p.ex2 {
             <br>Building System:{{$product->system}}
             <br>Construction Type:{{$product->ctype}}
             <br>Interior/External cladding:{{$product->ifinish}}
-           <br>Color:{{$product->color}}
+            <br>Color:{{$product->color}}
             <br>Designed By:{{$product->designed}}
            <br>All possible configuration:{{$product->configuration}}
            <br>Specification text:{{$product->specification}}
