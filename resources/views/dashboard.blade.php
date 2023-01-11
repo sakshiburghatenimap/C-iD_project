@@ -33,8 +33,13 @@
 </head>
 
 <body>
-
- 
+<style>
+  .col-xxl-10 {
+    flex: 0 0 auto;
+    width: 33.333333%;
+    height:35%;
+}
+  </style>
   <style>
   .sidebar{
   background-image: url('/assets/img/C-iD platform background green.jpg');
@@ -425,7 +430,7 @@ body {
 
               <div class="card info-card revenue-card">
               <div align="left">
-              <img src="assets/img/icon reports.png" width="20px" height="20px">
+              <img src="assets/img/icon reports.png" width="40px" height="20px">
                 <label><h1 class="card-title">Recent Report</h1></label>
               </div>
                 <div class="filter">
@@ -441,8 +446,7 @@ body {
                     <div class="ps-1" align="left">
                       <u><li>Name user| Name object(C-iD's)</li>
                       <li>Name user|Name object(C-iD's)</li>
-                      <li>Name user|Name object(C-iD's)</li>
-                      <li>Name user|Name object(C-iD's)</li>
+                   
                      </u>
                     </div>
                   </div>

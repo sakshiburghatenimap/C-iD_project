@@ -182,6 +182,8 @@ p.ex2 {
   outline-style: solid;
   outline-color: black;
   outline-width: thin;
+  width: 280px;
+  height: 60px;
 }
 </style>
 <style>
@@ -203,10 +205,8 @@ p.ex2 {
   }
 </style>
 <style>
-  .box {
+  .border {
     border: 2px thin black;
-    height:400px;
-    width:500px;
     outline-style: solid;
     outline-color: black;
     outline-width: thin;
@@ -451,12 +451,12 @@ p.ex2 {
          <img src="{{ asset('assets/img/icon-Bio-based.png') }}" id="myimgbi" width="50px" height="50px">
          <img src="{{ asset('assets/img/icon-Extendablelife.png') }}" id="myimgq" width="50px" height="50px">
           </br>
-          </h6>
-         </div>
-        <p class="ex1"><i class="fa fa-clipboard"></i>&nbspMaintainance sheet:</br>{{$product->msheet}}</p><br>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<div class="col-lg-7">
-          <h6 class="box">&nbsp<i class="fa fa-list"></i><b>&nbspSpecifications</b></br>
-           <br>Manufacturer:{{$product->manufacturer}}
+    </br>
+    </br>
+    
+          <div class="border">
+          <i class="fa fa-list"></i><b>&nbspSustainability values</b>
+          <br>Manufacturer:{{$product->manufacturer}}
             <br>Website Brand:{{$product->website}}
             <br>Bearing Capacity(kg/m):{{$product->bearing}}
             <br>U-value(W/m2K):{{$product->value}}
@@ -474,12 +474,22 @@ p.ex2 {
            <br>All possible configuration:{{$product->configuration}}
            <br>Specification text:{{$product->specification}}
             <br>3D object:{{$product->object}}
-          </h6>
-        </div>
+            </h6>
+    </div>
+         </div>
+    </br>
+    <div class="row">
+    <div class="col-md-5 col-lg-5 col-xl-5">
+        <p class="ex1"><i class="fa fa-clipboard"></i>&nbspMaintainance sheet:</br>{{$product->msheet}}</p><br>
         <p class="ex2"><i class="fa fa-wrench"></i>&nbsp Installation sheet:</br>{{$product->isheet}}</p>
-        <div class="square"><b>Brand </br>Logo</div>
+        <div class="square"><b>{{$product->logo}}</div>
+      
+    </div>
+    
+         
       
         </section>
+       
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
